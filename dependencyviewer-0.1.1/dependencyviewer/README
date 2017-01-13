@@ -1,0 +1,7 @@
+How to run:
+
+java -jar dependencyviewer-runnable.jar
+
+How to get help on parameters:
+
+java -jar dependencyviewer-runnable.jar -help

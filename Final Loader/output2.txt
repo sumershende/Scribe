@@ -1,0 +1,2622 @@
+
+
+Sentence #1 (20 tokens, sentiment: Very positive):
+The anthropomorphic multi-utility robot, TARS, from the science fiction movie Interstellar is enthralling to say the least!
+[FILENAME=input.txt]
+[Text=The PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=anthropomorphic PartOfSpeech=JJ Lemma=anthropomorphic SentimentClass=Positive]
+[Text=multi-utility PartOfSpeech=JJ Lemma=multi-utility SentimentClass=Neutral]
+[Text=robot PartOfSpeech=NN Lemma=robot SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=TARS PartOfSpeech=NN Lemma=tars SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=from PartOfSpeech=IN Lemma=from SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=science PartOfSpeech=NN Lemma=science SentimentClass=Neutral]
+[Text=fiction PartOfSpeech=NN Lemma=fiction SentimentClass=Positive]
+[Text=movie PartOfSpeech=NN Lemma=movie SentimentClass=Neutral]
+[Text=Interstellar PartOfSpeech=NN Lemma=interstellar SentimentClass=Neutral]
+[Text=is PartOfSpeech=VBZ Lemma=be SentimentClass=Neutral]
+[Text=enthralling PartOfSpeech=VBG Lemma=enthral SentimentClass=Very positive]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=say PartOfSpeech=VB Lemma=say SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=least PartOfSpeech=JJS Lemma=least SentimentClass=Negative]
+[Text=! PartOfSpeech=. Lemma=! SentimentClass=Neutral]
+
+root(ROOT-0, enthralling-15)
+det(robot-4, The-1)
+amod(robot-4, anthropomorphic-2)
+amod(robot-4, multi-utility-3)
+nsubj(enthralling-15, robot-4)
+punct(robot-4, ,-5)
+appos(robot-4, TARS-6)
+punct(robot-4, ,-7)
+case(Interstellar-13, from-8)
+det(Interstellar-13, the-9)
+compound(Interstellar-13, science-10)
+compound(Interstellar-13, fiction-11)
+compound(Interstellar-13, movie-12)
+nmod:from(robot-4, Interstellar-13)
+aux(enthralling-15, is-14)
+mark(say-17, to-16)
+xcomp(enthralling-15, say-17)
+det(least-19, the-18)
+dobj(say-17, least-19)
+punct(enthralling-15, !-20)
+
+Sentence #2 (37 tokens, sentiment: Positive):
+While it performs versatile tasks like piloting spaceships, collecting data-samples and assisting humans in carrying out heavy duty tasks, it is witty, sarcastic, and humorous too, making it an amazing companion.
+[FILENAME=input.txt]
+[Text=While PartOfSpeech=IN Lemma=while SentimentClass=Neutral]
+[Text=it PartOfSpeech=PRP Lemma=it SentimentClass=Neutral]
+[Text=performs PartOfSpeech=VBZ Lemma=perform SentimentClass=Neutral]
+[Text=versatile PartOfSpeech=JJ Lemma=versatile SentimentClass=Neutral]
+[Text=tasks PartOfSpeech=NNS Lemma=task SentimentClass=Neutral]
+[Text=like PartOfSpeech=IN Lemma=like SentimentClass=Neutral]
+[Text=piloting PartOfSpeech=VBG Lemma=pilot SentimentClass=Neutral]
+[Text=spaceships PartOfSpeech=NNS Lemma=spaceship SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=collecting PartOfSpeech=VBG Lemma=collect SentimentClass=Neutral]
+[Text=data-samples PartOfSpeech=NNS Lemma=data-sample SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=assisting PartOfSpeech=VBG Lemma=assist SentimentClass=Neutral]
+[Text=humans PartOfSpeech=NNS Lemma=human SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=carrying PartOfSpeech=VBG Lemma=carry SentimentClass=Neutral]
+[Text=out PartOfSpeech=RP Lemma=out SentimentClass=Negative]
+[Text=heavy PartOfSpeech=JJ Lemma=heavy SentimentClass=Neutral]
+[Text=duty PartOfSpeech=NN Lemma=duty SentimentClass=Neutral]
+[Text=tasks PartOfSpeech=NNS Lemma=task SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=it PartOfSpeech=PRP Lemma=it SentimentClass=Neutral]
+[Text=is PartOfSpeech=VBZ Lemma=be SentimentClass=Neutral]
+[Text=witty PartOfSpeech=JJ Lemma=witty SentimentClass=Positive]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=sarcastic PartOfSpeech=JJ Lemma=sarcastic SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=humorous PartOfSpeech=JJ Lemma=humorous SentimentClass=Positive]
+[Text=too PartOfSpeech=RB Lemma=too SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=making PartOfSpeech=VBG Lemma=make SentimentClass=Neutral]
+[Text=it PartOfSpeech=PRP Lemma=it SentimentClass=Neutral]
+[Text=an PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=amazing PartOfSpeech=JJ Lemma=amazing SentimentClass=Very positive]
+[Text=companion PartOfSpeech=NN Lemma=companion SentimentClass=Positive]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, witty-24)
+mark(performs-3, While-1)
+nsubj(performs-3, it-2)
+advcl(witty-24, performs-3)
+amod(tasks-5, versatile-4)
+dobj(performs-3, tasks-5)
+mark(piloting-7, like-6)
+advcl(performs-3, piloting-7)
+dobj(piloting-7, spaceships-8)
+punct(piloting-7, ,-9)
+conj:and(piloting-7, collecting-10)
+dobj(collecting-10, data-samples-11)
+cc(piloting-7, and-12)
+conj:and(piloting-7, assisting-13)
+dobj(assisting-13, humans-14)
+mark(carrying-16, in-15)
+advcl(assisting-13, carrying-16)
+compound:prt(carrying-16, out-17)
+amod(tasks-20, heavy-18)
+compound(tasks-20, duty-19)
+dobj(carrying-16, tasks-20)
+punct(witty-24, ,-21)
+nsubj(witty-24, it-22)
+cop(witty-24, is-23)
+punct(witty-24, ,-25)
+conj:and(witty-24, sarcastic-26)
+punct(witty-24, ,-27)
+cc(witty-24, and-28)
+conj:and(witty-24, humorous-29)
+advmod(witty-24, too-30)
+punct(witty-24, ,-31)
+xcomp(witty-24, making-32)
+nsubj(companion-36, it-33)
+det(companion-36, an-34)
+amod(companion-36, amazing-35)
+xcomp(making-32, companion-36)
+punct(witty-24, .-37)
+
+Sentence #3 (7 tokens, sentiment: Neutral):
+Can TARS ever transform into reality?
+[FILENAME=input.txt]
+[Text=Can PartOfSpeech=MD Lemma=can SentimentClass=Neutral]
+[Text=TARS PartOfSpeech=NNS Lemma=tar SentimentClass=Neutral]
+[Text=ever PartOfSpeech=RB Lemma=ever SentimentClass=Neutral]
+[Text=transform PartOfSpeech=VBP Lemma=transform SentimentClass=Neutral]
+[Text=into PartOfSpeech=IN Lemma=into SentimentClass=Neutral]
+[Text=reality PartOfSpeech=NN Lemma=reality SentimentClass=Neutral]
+[Text=? PartOfSpeech=. Lemma=? SentimentClass=Neutral]
+
+root(ROOT-0, transform-4)
+dep(transform-4, Can-1)
+nsubj(transform-4, TARS-2)
+advmod(transform-4, ever-3)
+case(reality-6, into-5)
+nmod:into(transform-4, reality-6)
+punct(transform-4, ?-7)
+
+Sentence #4 (40 tokens, sentiment: Negative):
+Well, given the pace at which technology is advancing and considering that personal assistance system like Siri and humanoids like ATLAS exist today, it won’t be long before we have TARS as a real world workmate.
+[FILENAME=input.txt]
+[Text=Well PartOfSpeech=RB Lemma=well SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=given PartOfSpeech=VBN Lemma=give SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=pace PartOfSpeech=NN Lemma=pace SentimentClass=Neutral]
+[Text=at PartOfSpeech=IN Lemma=at SentimentClass=Neutral]
+[Text=which PartOfSpeech=WDT Lemma=which SentimentClass=Neutral]
+[Text=technology PartOfSpeech=NN Lemma=technology SentimentClass=Neutral]
+[Text=is PartOfSpeech=VBZ Lemma=be SentimentClass=Neutral]
+[Text=advancing PartOfSpeech=VBG Lemma=advance SentimentClass=Positive]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=considering PartOfSpeech=VBG Lemma=consider SentimentClass=Neutral]
+[Text=that PartOfSpeech=IN Lemma=that SentimentClass=Neutral]
+[Text=personal PartOfSpeech=JJ Lemma=personal SentimentClass=Positive]
+[Text=assistance PartOfSpeech=NN Lemma=assistance SentimentClass=Neutral]
+[Text=system PartOfSpeech=NN Lemma=system SentimentClass=Neutral]
+[Text=like PartOfSpeech=IN Lemma=like SentimentClass=Neutral]
+[Text=Siri PartOfSpeech=NNP Lemma=Siri SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=humanoids PartOfSpeech=NNS Lemma=humanoid SentimentClass=Neutral]
+[Text=like PartOfSpeech=IN Lemma=like SentimentClass=Neutral]
+[Text=ATLAS PartOfSpeech=NNP Lemma=ATLAS SentimentClass=Neutral]
+[Text=exist PartOfSpeech=VBP Lemma=exist SentimentClass=Neutral]
+[Text=today PartOfSpeech=NN Lemma=today SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=it PartOfSpeech=PRP Lemma=it SentimentClass=Neutral]
+[Text=wo PartOfSpeech=MD Lemma=will SentimentClass=Neutral]
+[Text=n't PartOfSpeech=RB Lemma=not SentimentClass=Neutral]
+[Text=be PartOfSpeech=VB Lemma=be SentimentClass=Neutral]
+[Text=long PartOfSpeech=RB Lemma=long SentimentClass=Neutral]
+[Text=before PartOfSpeech=IN Lemma=before SentimentClass=Neutral]
+[Text=we PartOfSpeech=PRP Lemma=we SentimentClass=Neutral]
+[Text=have PartOfSpeech=VBP Lemma=have SentimentClass=Neutral]
+[Text=TARS PartOfSpeech=NNS Lemma=tar SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=real PartOfSpeech=JJ Lemma=real SentimentClass=Positive]
+[Text=world PartOfSpeech=NN Lemma=world SentimentClass=Neutral]
+[Text=workmate PartOfSpeech=NN Lemma=workmate SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, be-29)
+advmod(be-29, Well-1)
+punct(be-29, ,-2)
+case(pace-5, given-3)
+det(pace-5, the-4)
+nmod:given(be-29, pace-5)
+case(which-7, at-6)
+nmod:at(advancing-10, which-7)
+nsubj(advancing-10, technology-8)
+aux(advancing-10, is-9)
+acl:relcl(pace-5, advancing-10)
+cc(advancing-10, and-11)
+conj:and(advancing-10, considering-12)
+mark(exist-23, that-13)
+amod(system-16, personal-14)
+compound(system-16, assistance-15)
+nsubj(exist-23, system-16)
+case(Siri-18, like-17)
+nmod:like(system-16, Siri-18)
+cc(system-16, and-19)
+conj:and(system-16, humanoids-20)
+case(ATLAS-22, like-21)
+nmod:like(humanoids-20, ATLAS-22)
+ccomp(advancing-10, exist-23)
+nmod:tmod(exist-23, today-24)
+punct(be-29, ,-25)
+nsubj(be-29, it-26)
+aux(be-29, wo-27)
+neg(be-29, n't-28)
+advmod(be-29, long-30)
+mark(have-33, before-31)
+nsubj(have-33, we-32)
+advcl(be-29, have-33)
+dobj(have-33, TARS-34)
+case(workmate-39, as-35)
+det(workmate-39, a-36)
+amod(workmate-39, real-37)
+compound(workmate-39, world-38)
+nmod:as(TARS-34, workmate-39)
+punct(be-29, .-40)
+
+Sentence #5 (49 tokens, sentiment: Negative):
+To fulfil my desire to actively contribute in building such futuristic devices, I need technical prowess in all aspects of the computer domain and, therefore, wish to pursue a Masters in Computer Science with the focus on Artificial Intelligence (AI) and Data Mining.
+[FILENAME=input.txt]
+[Text=To PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=fulfil PartOfSpeech=VB Lemma=fulfil SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=desire PartOfSpeech=NN Lemma=desire SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=actively PartOfSpeech=RB Lemma=actively SentimentClass=Neutral]
+[Text=contribute PartOfSpeech=VB Lemma=contribute SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=building PartOfSpeech=VBG Lemma=build SentimentClass=Neutral]
+[Text=such PartOfSpeech=JJ Lemma=such SentimentClass=Neutral]
+[Text=futuristic PartOfSpeech=JJ Lemma=futuristic SentimentClass=Neutral]
+[Text=devices PartOfSpeech=NNS Lemma=device SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=need PartOfSpeech=VBP Lemma=need SentimentClass=Neutral]
+[Text=technical PartOfSpeech=JJ Lemma=technical SentimentClass=Neutral]
+[Text=prowess PartOfSpeech=NN Lemma=prowess SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=all PartOfSpeech=DT Lemma=all SentimentClass=Neutral]
+[Text=aspects PartOfSpeech=NNS Lemma=aspect SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=computer PartOfSpeech=NN Lemma=computer SentimentClass=Neutral]
+[Text=domain PartOfSpeech=NN Lemma=domain SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=therefore PartOfSpeech=RB Lemma=therefore SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=wish PartOfSpeech=NN Lemma=wish SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=pursue PartOfSpeech=VB Lemma=pursue SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=Masters PartOfSpeech=NN Lemma=masters SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=Computer PartOfSpeech=NNP Lemma=Computer SentimentClass=Neutral]
+[Text=Science PartOfSpeech=NNP Lemma=Science SentimentClass=Neutral]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=focus PartOfSpeech=NN Lemma=focus SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=Artificial PartOfSpeech=NNP Lemma=Artificial SentimentClass=Neutral]
+[Text=Intelligence PartOfSpeech=NNP Lemma=Intelligence SentimentClass=Neutral]
+[Text=-LRB- PartOfSpeech=-LRB- Lemma=-lrb- SentimentClass=Neutral]
+[Text=AI PartOfSpeech=NNP Lemma=AI SentimentClass=Neutral]
+[Text=-RRB- PartOfSpeech=-RRB- Lemma=-rrb- SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=Data PartOfSpeech=NNS Lemma=datum SentimentClass=Neutral]
+[Text=Mining PartOfSpeech=NN Lemma=mining SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, need-15)
+mark(fulfil-2, To-1)
+advcl(need-15, fulfil-2)
+nmod:poss(desire-4, my-3)
+dobj(fulfil-2, desire-4)
+mark(contribute-7, to-5)
+advmod(contribute-7, actively-6)
+acl(desire-4, contribute-7)
+mark(building-9, in-8)
+advcl(contribute-7, building-9)
+amod(devices-12, such-10)
+amod(devices-12, futuristic-11)
+dobj(building-9, devices-12)
+punct(need-15, ,-13)
+nsubj(need-15, I-14)
+amod(prowess-17, technical-16)
+dobj(need-15, prowess-17)
+case(aspects-20, in-18)
+det(aspects-20, all-19)
+nmod:in(need-15, aspects-20)
+case(domain-24, of-21)
+det(domain-24, the-22)
+compound(domain-24, computer-23)
+nmod:of(aspects-20, domain-24)
+cc(domain-24, and-25)
+punct(therefore-27, ,-26)
+dep(domain-24, therefore-27)
+punct(therefore-27, ,-28)
+conj:and(domain-24, wish-29)
+mark(pursue-31, to-30)
+advcl(need-15, pursue-31)
+det(Masters-33, a-32)
+dobj(pursue-31, Masters-33)
+case(Science-36, in-34)
+compound(Science-36, Computer-35)
+nmod:in(Masters-33, Science-36)
+case(focus-39, with-37)
+det(focus-39, the-38)
+nmod:with(pursue-31, focus-39)
+case(Intelligence-42, on-40)
+compound(Intelligence-42, Artificial-41)
+nmod:on(focus-39, Intelligence-42)
+punct(AI-44, -LRB--43)
+appos(Intelligence-42, AI-44)
+punct(AI-44, -RRB--45)
+cc(Intelligence-42, and-46)
+compound(Mining-48, Data-47)
+conj:and(Intelligence-42, Mining-48)
+punct(need-15, .-49)
+
+Sentence #6 (29 tokens, sentiment: Negative):
+After gaining some relevant experience by working with corporate giants like Apple, Alphabet or Microsoft, I wish to start my own company and develop cutting-edge technologies.
+[FILENAME=input.txt]
+[Text=After PartOfSpeech=IN Lemma=after SentimentClass=Neutral]
+[Text=gaining PartOfSpeech=VBG Lemma=gain SentimentClass=Neutral]
+[Text=some PartOfSpeech=DT Lemma=some SentimentClass=Neutral]
+[Text=relevant PartOfSpeech=JJ Lemma=relevant SentimentClass=Neutral]
+[Text=experience PartOfSpeech=NN Lemma=experience SentimentClass=Neutral]
+[Text=by PartOfSpeech=IN Lemma=by SentimentClass=Neutral]
+[Text=working PartOfSpeech=VBG Lemma=work SentimentClass=Neutral]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=corporate PartOfSpeech=JJ Lemma=corporate SentimentClass=Neutral]
+[Text=giants PartOfSpeech=NNS Lemma=giant SentimentClass=Neutral]
+[Text=like PartOfSpeech=IN Lemma=like SentimentClass=Neutral]
+[Text=Apple PartOfSpeech=NNP Lemma=Apple SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=Alphabet PartOfSpeech=NNP Lemma=Alphabet SentimentClass=Neutral]
+[Text=or PartOfSpeech=CC Lemma=or SentimentClass=Neutral]
+[Text=Microsoft PartOfSpeech=NNP Lemma=Microsoft SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=wish PartOfSpeech=VBP Lemma=wish SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=start PartOfSpeech=VB Lemma=start SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=own PartOfSpeech=JJ Lemma=own SentimentClass=Neutral]
+[Text=company PartOfSpeech=NN Lemma=company SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=develop PartOfSpeech=VB Lemma=develop SentimentClass=Neutral]
+[Text=cutting-edge PartOfSpeech=JJ Lemma=cutting-edge SentimentClass=Positive]
+[Text=technologies PartOfSpeech=NNS Lemma=technology SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, wish-19)
+mark(gaining-2, After-1)
+advcl(wish-19, gaining-2)
+det(experience-5, some-3)
+amod(experience-5, relevant-4)
+dobj(gaining-2, experience-5)
+mark(working-7, by-6)
+advcl(gaining-2, working-7)
+case(giants-10, with-8)
+amod(giants-10, corporate-9)
+nmod:with(working-7, giants-10)
+case(Apple-12, like-11)
+nmod:like(giants-10, Apple-12)
+punct(Apple-12, ,-13)
+conj:or(Apple-12, Alphabet-14)
+cc(Apple-12, or-15)
+conj:or(Apple-12, Microsoft-16)
+punct(wish-19, ,-17)
+nsubj(wish-19, I-18)
+mark(start-21, to-20)
+xcomp(wish-19, start-21)
+nmod:poss(company-24, my-22)
+amod(company-24, own-23)
+dobj(start-21, company-24)
+cc(start-21, and-25)
+conj:and(start-21, develop-26)
+amod(technologies-28, cutting-edge-27)
+dobj(develop-26, technologies-28)
+punct(wish-19, .-29)
+
+Sentence #7 (23 tokens, sentiment: Negative):
+My penchant for programming dates back to my school days when I learnt to develop simple HTML pages and small web applications.
+[FILENAME=input.txt]
+[Text=My PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=penchant PartOfSpeech=NN Lemma=penchant SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=programming PartOfSpeech=NN Lemma=programming SentimentClass=Neutral]
+[Text=dates PartOfSpeech=NNS Lemma=date SentimentClass=Positive]
+[Text=back PartOfSpeech=RB Lemma=back SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=school PartOfSpeech=NN Lemma=school SentimentClass=Neutral]
+[Text=days PartOfSpeech=NNS Lemma=day SentimentClass=Neutral]
+[Text=when PartOfSpeech=WRB Lemma=when SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=learnt PartOfSpeech=VBD Lemma=learn SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=develop PartOfSpeech=VB Lemma=develop SentimentClass=Neutral]
+[Text=simple PartOfSpeech=JJ Lemma=simple SentimentClass=Neutral]
+[Text=HTML PartOfSpeech=NNP Lemma=HTML SentimentClass=Neutral]
+[Text=pages PartOfSpeech=NNS Lemma=page SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=small PartOfSpeech=JJ Lemma=small SentimentClass=Neutral]
+[Text=web PartOfSpeech=NN Lemma=web SentimentClass=Neutral]
+[Text=applications PartOfSpeech=NNS Lemma=application SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, penchant-2)
+nmod:poss(penchant-2, My-1)
+case(dates-5, for-3)
+compound(dates-5, programming-4)
+nmod:for(penchant-2, dates-5)
+advmod(dates-5, back-6)
+case(days-10, to-7)
+nmod:poss(days-10, my-8)
+compound(days-10, school-9)
+nmod:to(back-6, days-10)
+advmod(learnt-13, when-11)
+nsubj(learnt-13, I-12)
+acl:relcl(dates-5, learnt-13)
+mark(develop-15, to-14)
+xcomp(learnt-13, develop-15)
+amod(pages-18, simple-16)
+compound(pages-18, HTML-17)
+dobj(develop-15, pages-18)
+cc(pages-18, and-19)
+amod(applications-22, small-20)
+compound(applications-22, web-21)
+conj:and(pages-18, applications-22)
+punct(penchant-2, .-23)
+
+Sentence #8 (30 tokens, sentiment: Positive):
+A website that I made at the age of 14 for my uncle’s furniture manufacturing company, using CSS, Jquery and JavaScript developed my web developing skills.
+[FILENAME=input.txt]
+[Text=A PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=website PartOfSpeech=NN Lemma=website SentimentClass=Neutral]
+[Text=that PartOfSpeech=IN Lemma=that SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=made PartOfSpeech=VBD Lemma=make SentimentClass=Neutral]
+[Text=at PartOfSpeech=IN Lemma=at SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=age PartOfSpeech=NN Lemma=age SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=14 PartOfSpeech=CD Lemma=14 SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=uncle PartOfSpeech=NN Lemma=uncle SentimentClass=Neutral]
+[Text='s PartOfSpeech=POS Lemma='s SentimentClass=Neutral]
+[Text=furniture PartOfSpeech=NN Lemma=furniture SentimentClass=Neutral]
+[Text=manufacturing PartOfSpeech=VBG Lemma=manufacture SentimentClass=Neutral]
+[Text=company PartOfSpeech=NN Lemma=company SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=using PartOfSpeech=VBG Lemma=use SentimentClass=Neutral]
+[Text=CSS PartOfSpeech=NNP Lemma=CSS SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=Jquery PartOfSpeech=NNP Lemma=Jquery SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=JavaScript PartOfSpeech=NNP Lemma=JavaScript SentimentClass=Neutral]
+[Text=developed PartOfSpeech=VBD Lemma=develop SentimentClass=Positive]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=web PartOfSpeech=NN Lemma=web SentimentClass=Neutral]
+[Text=developing PartOfSpeech=VBG Lemma=develop SentimentClass=Neutral]
+[Text=skills PartOfSpeech=NNS Lemma=skill SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, developed-25)
+det(website-2, A-1)
+nsubj(developed-25, website-2)
+mark(made-5, that-3)
+nsubj(made-5, I-4)
+dep(website-2, made-5)
+case(age-8, at-6)
+det(age-8, the-7)
+nmod:at(made-5, age-8)
+case(14-10, of-9)
+nmod:of(age-8, 14-10)
+case(company-17, for-11)
+nmod:poss(uncle-13, my-12)
+nmod:poss(company-17, uncle-13)
+case(uncle-13, 's-14)
+compound(company-17, furniture-15)
+amod(company-17, manufacturing-16)
+nmod:for(made-5, company-17)
+punct(company-17, ,-18)
+case(CSS-20, using-19)
+nmod:using(company-17, CSS-20)
+punct(CSS-20, ,-21)
+conj:and(CSS-20, Jquery-22)
+cc(CSS-20, and-23)
+conj:and(CSS-20, JavaScript-24)
+nmod:poss(web-27, my-26)
+dobj(developed-25, web-27)
+xcomp(developed-25, developing-28)
+dobj(developing-28, skills-29)
+punct(developed-25, .-30)
+
+Sentence #9 (15 tokens, sentiment: Negative):
+Encouraged by the accolades I received, I began publishing websites for local companies.
+[FILENAME=input.txt]
+[Text=Encouraged PartOfSpeech=VBN Lemma=encourage SentimentClass=Neutral]
+[Text=by PartOfSpeech=IN Lemma=by SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=accolades PartOfSpeech=NNS Lemma=accolade SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=received PartOfSpeech=VBD Lemma=receive SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=began PartOfSpeech=VBD Lemma=begin SentimentClass=Neutral]
+[Text=publishing PartOfSpeech=VBG Lemma=publish SentimentClass=Neutral]
+[Text=websites PartOfSpeech=NNS Lemma=website SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=local PartOfSpeech=JJ Lemma=local SentimentClass=Positive]
+[Text=companies PartOfSpeech=NNS Lemma=company SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, began-9)
+advcl(began-9, Encouraged-1)
+case(accolades-4, by-2)
+det(accolades-4, the-3)
+nmod:by(Encouraged-1, accolades-4)
+nsubj(received-6, I-5)
+acl:relcl(accolades-4, received-6)
+punct(began-9, ,-7)
+nsubj(began-9, I-8)
+amod(websites-11, publishing-10)
+dobj(began-9, websites-11)
+case(companies-14, for-12)
+amod(companies-14, local-13)
+nmod:for(websites-11, companies-14)
+punct(began-9, .-15)
+
+Sentence #10 (26 tokens, sentiment: Negative):
+These small beginnings encouraged me to pursue a Bachelor’s degree in Computer Engineering where I learned fundamentals of mathematical, scientific and engineering concepts.
+[FILENAME=input.txt]
+[Text=These PartOfSpeech=DT Lemma=these SentimentClass=Neutral]
+[Text=small PartOfSpeech=JJ Lemma=small SentimentClass=Neutral]
+[Text=beginnings PartOfSpeech=NNS Lemma=beginning SentimentClass=Positive]
+[Text=encouraged PartOfSpeech=VBD Lemma=encourage SentimentClass=Neutral]
+[Text=me PartOfSpeech=PRP Lemma=I SentimentClass=Positive]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=pursue PartOfSpeech=VB Lemma=pursue SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=Bachelor PartOfSpeech=NN Lemma=bachelor SentimentClass=Neutral]
+[Text='s PartOfSpeech=POS Lemma='s SentimentClass=Neutral]
+[Text=degree PartOfSpeech=NN Lemma=degree SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=Computer PartOfSpeech=NNP Lemma=Computer SentimentClass=Neutral]
+[Text=Engineering PartOfSpeech=NNP Lemma=Engineering SentimentClass=Neutral]
+[Text=where PartOfSpeech=WRB Lemma=where SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=learned PartOfSpeech=VBD Lemma=learn SentimentClass=Neutral]
+[Text=fundamentals PartOfSpeech=NNS Lemma=fundamental SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=mathematical PartOfSpeech=JJ Lemma=mathematical SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=scientific PartOfSpeech=JJ Lemma=scientific SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=engineering PartOfSpeech=NN Lemma=engineering SentimentClass=Neutral]
+[Text=concepts PartOfSpeech=NNS Lemma=concept SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, encouraged-4)
+det(beginnings-3, These-1)
+amod(beginnings-3, small-2)
+nsubj(encouraged-4, beginnings-3)
+dobj(encouraged-4, me-5)
+mark(pursue-7, to-6)
+xcomp(encouraged-4, pursue-7)
+det(Bachelor-9, a-8)
+nmod:poss(degree-11, Bachelor-9)
+case(Bachelor-9, 's-10)
+dobj(pursue-7, degree-11)
+case(Engineering-14, in-12)
+compound(Engineering-14, Computer-13)
+nmod:in(pursue-7, Engineering-14)
+advmod(learned-17, where-15)
+nsubj(learned-17, I-16)
+acl:relcl(Engineering-14, learned-17)
+dobj(learned-17, fundamentals-18)
+case(concepts-25, of-19)
+amod(concepts-25, mathematical-20)
+punct(mathematical-20, ,-21)
+conj:and(mathematical-20, scientific-22)
+cc(mathematical-20, and-23)
+conj:and(mathematical-20, engineering-24)
+nmod:of(fundamentals-18, concepts-25)
+punct(encouraged-4, .-26)
+
+Sentence #11 (23 tokens, sentiment: Positive):
+Due to a focused and persevering attitude, I have maintained an excellent academic record and currently rank second in my class.
+[FILENAME=input.txt]
+[Text=Due PartOfSpeech=JJ Lemma=due SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=focused PartOfSpeech=VBN Lemma=focus SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=persevering PartOfSpeech=VBG Lemma=persevere SentimentClass=Neutral]
+[Text=attitude PartOfSpeech=NN Lemma=attitude SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=have PartOfSpeech=VBP Lemma=have SentimentClass=Neutral]
+[Text=maintained PartOfSpeech=VBN Lemma=maintain SentimentClass=Positive]
+[Text=an PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=excellent PartOfSpeech=JJ Lemma=excellent SentimentClass=Very positive]
+[Text=academic PartOfSpeech=JJ Lemma=academic SentimentClass=Positive]
+[Text=record PartOfSpeech=NN Lemma=record SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=currently PartOfSpeech=RB Lemma=currently SentimentClass=Neutral]
+[Text=rank PartOfSpeech=VBP Lemma=rank SentimentClass=Negative]
+[Text=second PartOfSpeech=JJ Lemma=second SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=class PartOfSpeech=NN Lemma=class SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, maintained-11)
+case(a-3, Due-1)
+mwe(Due-1, to-2)
+nmod:due_to(maintained-11, a-3)
+dep(a-3, focused-4)
+cc(focused-4, and-5)
+conj:and(focused-4, persevering-6)
+dobj(persevering-6, attitude-7)
+punct(maintained-11, ,-8)
+nsubj(maintained-11, I-9)
+aux(maintained-11, have-10)
+det(record-15, an-12)
+amod(record-15, excellent-13)
+amod(record-15, academic-14)
+dobj(maintained-11, record-15)
+cc(maintained-11, and-16)
+advmod(rank-18, currently-17)
+conj:and(maintained-11, rank-18)
+dobj(rank-18, second-19)
+case(class-22, in-20)
+nmod:poss(class-22, my-21)
+nmod:in(second-19, class-22)
+punct(maintained-11, .-23)
+
+Sentence #12 (20 tokens, sentiment: Negative):
+Courses like 'Software Engineering' and 'Software Project Management' taught me how a project is actualized.
+[FILENAME=input.txt]
+[Text=Courses PartOfSpeech=NNS Lemma=course SentimentClass=Neutral]
+[Text=like PartOfSpeech=IN Lemma=like SentimentClass=Neutral]
+[Text=` PartOfSpeech=`` Lemma=` SentimentClass=Neutral]
+[Text=Software PartOfSpeech=NNP Lemma=Software SentimentClass=Neutral]
+[Text=Engineering PartOfSpeech=NNP Lemma=Engineering SentimentClass=Neutral]
+[Text=' PartOfSpeech=POS Lemma=' SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=` PartOfSpeech=`` Lemma=` SentimentClass=Neutral]
+[Text=Software PartOfSpeech=NNP Lemma=Software SentimentClass=Neutral]
+[Text=Project PartOfSpeech=NNP Lemma=Project SentimentClass=Neutral]
+[Text=Management PartOfSpeech=NNP Lemma=Management SentimentClass=Neutral]
+[Text=' PartOfSpeech=POS Lemma=' SentimentClass=Neutral]
+[Text=taught PartOfSpeech=VBD Lemma=teach SentimentClass=Neutral]
+[Text=me PartOfSpeech=PRP Lemma=I SentimentClass=Positive]
+[Text=how PartOfSpeech=WRB Lemma=how SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=project PartOfSpeech=NN Lemma=project SentimentClass=Neutral]
+[Text=is PartOfSpeech=VBZ Lemma=be SentimentClass=Neutral]
+[Text=actualized PartOfSpeech=VBN Lemma=actualize SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, taught-13)
+nmod:like(taught-13, Courses-1)
+case(Courses-1, like-2)
+punct(Engineering-5, `-3)
+compound(Engineering-5, Software-4)
+dep(Courses-1, Engineering-5)
+case(Engineering-5, '-6)
+cc(Engineering-5, and-7)
+punct(Project-10, `-8)
+compound(Project-10, Software-9)
+conj:and(Engineering-5, Project-10)
+nsubj(taught-13, Management-11)
+case(Management-11, '-12)
+dobj(taught-13, me-14)
+advmod(actualized-19, how-15)
+det(project-17, a-16)
+nsubjpass(actualized-19, project-17)
+auxpass(actualized-19, is-18)
+dep(taught-13, actualized-19)
+punct(taught-13, .-20)
+
+Sentence #13 (17 tokens, sentiment: Negative):
+In due course, I began utilizing UNIX based operating frameworks and became proficient in Linux.
+[FILENAME=input.txt]
+[Text=In PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=due PartOfSpeech=JJ Lemma=due SentimentClass=Neutral]
+[Text=course PartOfSpeech=NN Lemma=course SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=began PartOfSpeech=VBD Lemma=begin SentimentClass=Neutral]
+[Text=utilizing PartOfSpeech=VBG Lemma=utilize SentimentClass=Positive]
+[Text=UNIX PartOfSpeech=NNP Lemma=UNIX SentimentClass=Neutral]
+[Text=based PartOfSpeech=VBN Lemma=base SentimentClass=Neutral]
+[Text=operating PartOfSpeech=VBG Lemma=operate SentimentClass=Neutral]
+[Text=frameworks PartOfSpeech=NNS Lemma=framework SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=became PartOfSpeech=VBD Lemma=become SentimentClass=Neutral]
+[Text=proficient PartOfSpeech=JJ Lemma=proficient SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=Linux PartOfSpeech=NNP Lemma=Linux SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, began-6)
+case(course-3, In-1)
+amod(course-3, due-2)
+nmod:in(began-6, course-3)
+punct(began-6, ,-4)
+nsubj(began-6, I-5)
+xcomp(began-6, utilizing-7)
+dobj(utilizing-7, UNIX-8)
+case(frameworks-11, based-9)
+amod(frameworks-11, operating-10)
+nmod:based(utilizing-7, frameworks-11)
+cc(began-6, and-12)
+conj:and(began-6, became-13)
+xcomp(became-13, proficient-14)
+case(Linux-16, in-15)
+nmod:in(became-13, Linux-16)
+punct(began-6, .-17)
+
+Sentence #14 (33 tokens, sentiment: Negative):
+Inspired by a TEDx talk on AI, I took up the 'Artificial Intelligence' course by UCBerkeleyX and gained basic knowledge of neural networks, robotics and natural language processing.
+[FILENAME=input.txt]
+[Text=Inspired PartOfSpeech=VBN Lemma=inspire SentimentClass=Neutral]
+[Text=by PartOfSpeech=IN Lemma=by SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=TEDx PartOfSpeech=NN Lemma=tedx SentimentClass=Neutral]
+[Text=talk PartOfSpeech=NN Lemma=talk SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=AI PartOfSpeech=NNP Lemma=AI SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=took PartOfSpeech=VBD Lemma=take SentimentClass=Neutral]
+[Text=up PartOfSpeech=RP Lemma=up SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=` PartOfSpeech=`` Lemma=` SentimentClass=Neutral]
+[Text=Artificial PartOfSpeech=NNP Lemma=Artificial SentimentClass=Neutral]
+[Text=Intelligence PartOfSpeech=NNP Lemma=Intelligence SentimentClass=Neutral]
+[Text=' PartOfSpeech=POS Lemma=' SentimentClass=Neutral]
+[Text=course PartOfSpeech=NN Lemma=course SentimentClass=Neutral]
+[Text=by PartOfSpeech=IN Lemma=by SentimentClass=Neutral]
+[Text=UCBerkeleyX PartOfSpeech=NN Lemma=ucberkeleyx SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=gained PartOfSpeech=VBD Lemma=gain SentimentClass=Neutral]
+[Text=basic PartOfSpeech=JJ Lemma=basic SentimentClass=Neutral]
+[Text=knowledge PartOfSpeech=NN Lemma=knowledge SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=neural PartOfSpeech=JJ Lemma=neural SentimentClass=Neutral]
+[Text=networks PartOfSpeech=NNS Lemma=network SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=robotics PartOfSpeech=NNS Lemma=robotic SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=natural PartOfSpeech=JJ Lemma=natural SentimentClass=Neutral]
+[Text=language PartOfSpeech=NN Lemma=language SentimentClass=Neutral]
+[Text=processing PartOfSpeech=NN Lemma=processing SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, took-10)
+advcl(took-10, Inspired-1)
+case(talk-5, by-2)
+det(talk-5, a-3)
+compound(talk-5, TEDx-4)
+nmod:by(Inspired-1, talk-5)
+case(AI-7, on-6)
+nmod:on(talk-5, AI-7)
+punct(took-10, ,-8)
+nsubj(took-10, I-9)
+compound:prt(took-10, up-11)
+det(Artificial-14, the-12)
+punct(Artificial-14, `-13)
+dobj(took-10, Artificial-14)
+nmod:poss(course-17, Intelligence-15)
+case(Intelligence-15, '-16)
+dep(Artificial-14, course-17)
+case(UCBerkeleyX-19, by-18)
+nmod:by(Artificial-14, UCBerkeleyX-19)
+cc(took-10, and-20)
+conj:and(took-10, gained-21)
+amod(knowledge-23, basic-22)
+dobj(gained-21, knowledge-23)
+case(networks-26, of-24)
+amod(networks-26, neural-25)
+nmod:of(knowledge-23, networks-26)
+punct(networks-26, ,-27)
+conj:and(networks-26, robotics-28)
+cc(networks-26, and-29)
+amod(processing-32, natural-30)
+compound(processing-32, language-31)
+conj:and(networks-26, processing-32)
+punct(took-10, .-33)
+
+Sentence #15 (31 tokens, sentiment: Negative):
+Consequently, I took up Artificial Intelligence and Soft Computing as elective subjects in the final year of my undergraduate studies, thus building a strong foundation for graduate education.
+[FILENAME=input.txt]
+[Text=Consequently PartOfSpeech=RB Lemma=consequently SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=took PartOfSpeech=VBD Lemma=take SentimentClass=Neutral]
+[Text=up PartOfSpeech=RP Lemma=up SentimentClass=Neutral]
+[Text=Artificial PartOfSpeech=NNP Lemma=Artificial SentimentClass=Neutral]
+[Text=Intelligence PartOfSpeech=NNP Lemma=Intelligence SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=Soft PartOfSpeech=NNP Lemma=Soft SentimentClass=Neutral]
+[Text=Computing PartOfSpeech=NNP Lemma=Computing SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=elective PartOfSpeech=JJ Lemma=elective SentimentClass=Neutral]
+[Text=subjects PartOfSpeech=NNS Lemma=subject SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=final PartOfSpeech=JJ Lemma=final SentimentClass=Neutral]
+[Text=year PartOfSpeech=NN Lemma=year SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=undergraduate PartOfSpeech=JJ Lemma=undergraduate SentimentClass=Neutral]
+[Text=studies PartOfSpeech=NNS Lemma=study SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=thus PartOfSpeech=RB Lemma=thus SentimentClass=Neutral]
+[Text=building PartOfSpeech=VBG Lemma=build SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=strong PartOfSpeech=JJ Lemma=strong SentimentClass=Positive]
+[Text=foundation PartOfSpeech=NN Lemma=foundation SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=graduate PartOfSpeech=JJ Lemma=graduate SentimentClass=Neutral]
+[Text=education PartOfSpeech=NN Lemma=education SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, took-4)
+advmod(took-4, Consequently-1)
+punct(took-4, ,-2)
+nsubj(took-4, I-3)
+compound:prt(took-4, up-5)
+compound(Intelligence-7, Artificial-6)
+dobj(took-4, Intelligence-7)
+cc(Intelligence-7, and-8)
+compound(Computing-10, Soft-9)
+conj:and(Intelligence-7, Computing-10)
+case(subjects-13, as-11)
+amod(subjects-13, elective-12)
+nmod:as(took-4, subjects-13)
+case(year-17, in-14)
+det(year-17, the-15)
+amod(year-17, final-16)
+nmod:in(took-4, year-17)
+case(studies-21, of-18)
+nmod:poss(studies-21, my-19)
+amod(studies-21, undergraduate-20)
+nmod:of(year-17, studies-21)
+punct(took-4, ,-22)
+advmod(building-24, thus-23)
+advcl(took-4, building-24)
+det(foundation-27, a-25)
+amod(foundation-27, strong-26)
+dobj(building-24, foundation-27)
+case(education-30, for-28)
+amod(education-30, graduate-29)
+nmod:for(building-24, education-30)
+punct(took-4, .-31)
+
+Sentence #16 (39 tokens, sentiment: Negative):
+To further augment my knowledge, I took up an MTA course in Microsoft.NET Framework wherein I developed a Windows application which is presently used in our college for administrating and monitoring the use of computers on campus.
+[FILENAME=input.txt]
+[Text=To PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=further PartOfSpeech=RB Lemma=further SentimentClass=Neutral]
+[Text=augment PartOfSpeech=VB Lemma=augment SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=knowledge PartOfSpeech=NN Lemma=knowledge SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=took PartOfSpeech=VBD Lemma=take SentimentClass=Neutral]
+[Text=up PartOfSpeech=RP Lemma=up SentimentClass=Neutral]
+[Text=an PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=MTA PartOfSpeech=NN Lemma=mta SentimentClass=Neutral]
+[Text=course PartOfSpeech=NN Lemma=course SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=Microsoft.NET PartOfSpeech=NNP Lemma=Microsoft.NET SentimentClass=Neutral]
+[Text=Framework PartOfSpeech=NNP Lemma=Framework SentimentClass=Neutral]
+[Text=wherein PartOfSpeech=WRB Lemma=wherein SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=developed PartOfSpeech=VBD Lemma=develop SentimentClass=Positive]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=Windows PartOfSpeech=NNP Lemma=Windows SentimentClass=Neutral]
+[Text=application PartOfSpeech=NN Lemma=application SentimentClass=Neutral]
+[Text=which PartOfSpeech=WDT Lemma=which SentimentClass=Neutral]
+[Text=is PartOfSpeech=VBZ Lemma=be SentimentClass=Neutral]
+[Text=presently PartOfSpeech=RB Lemma=presently SentimentClass=Neutral]
+[Text=used PartOfSpeech=VBN Lemma=use SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=our PartOfSpeech=PRP$ Lemma=we SentimentClass=Neutral]
+[Text=college PartOfSpeech=NN Lemma=college SentimentClass=Positive]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=administrating PartOfSpeech=VBG Lemma=administrate SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=monitoring PartOfSpeech=VBG Lemma=monitor SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=use PartOfSpeech=NN Lemma=use SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=computers PartOfSpeech=NNS Lemma=computer SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=campus PartOfSpeech=NN Lemma=campus SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, took-8)
+mark(augment-3, To-1)
+advmod(augment-3, further-2)
+advcl(took-8, augment-3)
+nmod:poss(knowledge-5, my-4)
+dobj(augment-3, knowledge-5)
+punct(took-8, ,-6)
+nsubj(took-8, I-7)
+compound:prt(took-8, up-9)
+det(course-12, an-10)
+compound(course-12, MTA-11)
+dobj(took-8, course-12)
+case(Framework-15, in-13)
+compound(Framework-15, Microsoft.NET-14)
+nmod:in(course-12, Framework-15)
+advmod(developed-18, wherein-16)
+nsubj(developed-18, I-17)
+advcl(took-8, developed-18)
+det(application-21, a-19)
+compound(application-21, Windows-20)
+dobj(developed-18, application-21)
+nsubjpass(used-25, which-22)
+auxpass(used-25, is-23)
+advmod(used-25, presently-24)
+acl:relcl(application-21, used-25)
+case(college-28, in-26)
+nmod:poss(college-28, our-27)
+nmod:in(used-25, college-28)
+mark(administrating-30, for-29)
+advcl(used-25, administrating-30)
+cc(administrating-30, and-31)
+conj:and(administrating-30, monitoring-32)
+det(use-34, the-33)
+dobj(administrating-30, use-34)
+case(computers-36, of-35)
+nmod:of(use-34, computers-36)
+case(campus-38, on-37)
+nmod:on(computers-36, campus-38)
+punct(took-8, .-39)
+
+Sentence #17 (26 tokens, sentiment: Negative):
+My very first AI driven project was a Web Portal built as a forum for discussions and sharing notes, for undergraduate students in Mumbai.
+[FILENAME=input.txt]
+[Text=My PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=very PartOfSpeech=RB Lemma=very SentimentClass=Neutral]
+[Text=first PartOfSpeech=JJ Lemma=first SentimentClass=Neutral]
+[Text=AI PartOfSpeech=NNP Lemma=AI SentimentClass=Neutral]
+[Text=driven PartOfSpeech=VBN Lemma=drive SentimentClass=Neutral]
+[Text=project PartOfSpeech=NN Lemma=project SentimentClass=Neutral]
+[Text=was PartOfSpeech=VBD Lemma=be SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=Web PartOfSpeech=NN Lemma=web SentimentClass=Neutral]
+[Text=Portal PartOfSpeech=NN Lemma=portal SentimentClass=Neutral]
+[Text=built PartOfSpeech=VBN Lemma=build SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=forum PartOfSpeech=NN Lemma=forum SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=discussions PartOfSpeech=NNS Lemma=discussion SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=sharing PartOfSpeech=VBG Lemma=share SentimentClass=Neutral]
+[Text=notes PartOfSpeech=NNS Lemma=note SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=undergraduate PartOfSpeech=JJ Lemma=undergraduate SentimentClass=Neutral]
+[Text=students PartOfSpeech=NNS Lemma=student SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=Mumbai PartOfSpeech=NNP Lemma=Mumbai SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, Portal-10)
+nmod:poss(project-6, My-1)
+advmod(first-3, very-2)
+amod(project-6, first-3)
+nsubj(driven-5, AI-4)
+ccomp(first-3, driven-5)
+nsubj(Portal-10, project-6)
+cop(Portal-10, was-7)
+det(Portal-10, a-8)
+compound(Portal-10, Web-9)
+dep(Portal-10, built-11)
+case(forum-14, as-12)
+det(forum-14, a-13)
+nmod:as(built-11, forum-14)
+case(discussions-16, for-15)
+nmod:for(forum-14, discussions-16)
+cc(built-11, and-17)
+conj:and(built-11, sharing-18)
+dobj(sharing-18, notes-19)
+punct(sharing-18, ,-20)
+case(students-23, for-21)
+amod(students-23, undergraduate-22)
+nmod:for(sharing-18, students-23)
+case(Mumbai-25, in-24)
+nmod:in(students-23, Mumbai-25)
+punct(Portal-10, .-26)
+
+Sentence #18 (23 tokens, sentiment: Negative):
+It had a “Chat Bot” which automatically answered questions based on keyword architecture and redirected the user to relevant pages.
+[FILENAME=input.txt]
+[Text=It PartOfSpeech=PRP Lemma=it SentimentClass=Neutral]
+[Text=had PartOfSpeech=VBD Lemma=have SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=`` PartOfSpeech=`` Lemma=`` SentimentClass=Neutral]
+[Text=Chat PartOfSpeech=NNP Lemma=Chat SentimentClass=Neutral]
+[Text=Bot PartOfSpeech=NNP Lemma=Bot SentimentClass=Neutral]
+[Text='' PartOfSpeech='' Lemma='' SentimentClass=Neutral]
+[Text=which PartOfSpeech=WDT Lemma=which SentimentClass=Neutral]
+[Text=automatically PartOfSpeech=RB Lemma=automatically SentimentClass=Neutral]
+[Text=answered PartOfSpeech=VBD Lemma=answer SentimentClass=Positive]
+[Text=questions PartOfSpeech=NNS Lemma=question SentimentClass=Neutral]
+[Text=based PartOfSpeech=VBN Lemma=base SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=keyword PartOfSpeech=JJ Lemma=keyword SentimentClass=Neutral]
+[Text=architecture PartOfSpeech=NN Lemma=architecture SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=redirected PartOfSpeech=VBD Lemma=redirect SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=user PartOfSpeech=NN Lemma=user SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=relevant PartOfSpeech=JJ Lemma=relevant SentimentClass=Neutral]
+[Text=pages PartOfSpeech=NNS Lemma=page SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, had-2)
+nsubj(had-2, It-1)
+det(Bot-6, a-3)
+punct(Bot-6, ``-4)
+compound(Bot-6, Chat-5)
+dobj(had-2, Bot-6)
+punct(Bot-6, ''-7)
+nsubj(answered-10, which-8)
+advmod(answered-10, automatically-9)
+acl:relcl(Bot-6, answered-10)
+dobj(answered-10, questions-11)
+case(architecture-15, based-12)
+mwe(based-12, on-13)
+amod(architecture-15, keyword-14)
+advcl:based_on(answered-10, architecture-15)
+cc(had-2, and-16)
+conj:and(had-2, redirected-17)
+det(user-19, the-18)
+dobj(redirected-17, user-19)
+case(pages-22, to-20)
+amod(pages-22, relevant-21)
+nmod:to(redirected-17, pages-22)
+punct(had-2, .-23)
+
+Sentence #19 (31 tokens, sentiment: Positive):
+The persistent desire to build a more powerful AI system to benefit mankind led me to take up my current project “Scribe” – a natural language generation system.
+[FILENAME=input.txt]
+[Text=The PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=persistent PartOfSpeech=JJ Lemma=persistent SentimentClass=Neutral]
+[Text=desire PartOfSpeech=NN Lemma=desire SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=build PartOfSpeech=VB Lemma=build SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=more PartOfSpeech=RBR Lemma=more SentimentClass=Neutral]
+[Text=powerful PartOfSpeech=JJ Lemma=powerful SentimentClass=Very positive]
+[Text=AI PartOfSpeech=NN Lemma=ai SentimentClass=Neutral]
+[Text=system PartOfSpeech=NN Lemma=system SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=benefit PartOfSpeech=VB Lemma=benefit SentimentClass=Positive]
+[Text=mankind PartOfSpeech=NN Lemma=mankind SentimentClass=Neutral]
+[Text=led PartOfSpeech=VBD Lemma=lead SentimentClass=Neutral]
+[Text=me PartOfSpeech=PRP Lemma=I SentimentClass=Positive]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=take PartOfSpeech=VB Lemma=take SentimentClass=Neutral]
+[Text=up PartOfSpeech=RP Lemma=up SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=current PartOfSpeech=JJ Lemma=current SentimentClass=Neutral]
+[Text=project PartOfSpeech=NN Lemma=project SentimentClass=Neutral]
+[Text=`` PartOfSpeech=`` Lemma=`` SentimentClass=Neutral]
+[Text=Scribe PartOfSpeech=NN Lemma=scribe SentimentClass=Neutral]
+[Text='' PartOfSpeech='' Lemma='' SentimentClass=Neutral]
+[Text=-- PartOfSpeech=: Lemma=-- SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=natural PartOfSpeech=JJ Lemma=natural SentimentClass=Neutral]
+[Text=language PartOfSpeech=NN Lemma=language SentimentClass=Neutral]
+[Text=generation PartOfSpeech=NN Lemma=generation SentimentClass=Neutral]
+[Text=system PartOfSpeech=NN Lemma=system SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, led-14)
+det(desire-3, The-1)
+amod(desire-3, persistent-2)
+nsubj(led-14, desire-3)
+mark(build-5, to-4)
+acl(desire-3, build-5)
+det(system-10, a-6)
+advmod(powerful-8, more-7)
+amod(system-10, powerful-8)
+compound(system-10, AI-9)
+dobj(build-5, system-10)
+mark(benefit-12, to-11)
+advcl(build-5, benefit-12)
+dobj(benefit-12, mankind-13)
+dobj(led-14, me-15)
+mark(take-17, to-16)
+xcomp(led-14, take-17)
+compound:prt(take-17, up-18)
+nmod:poss(Scribe-23, my-19)
+amod(Scribe-23, current-20)
+compound(Scribe-23, project-21)
+punct(Scribe-23, ``-22)
+dobj(take-17, Scribe-23)
+punct(Scribe-23, ''-24)
+punct(Scribe-23, ---25)
+det(system-30, a-26)
+amod(system-30, natural-27)
+compound(system-30, language-28)
+compound(system-30, generation-29)
+dep(Scribe-23, system-30)
+punct(led-14, .-31)
+
+Sentence #20 (32 tokens, sentiment: Negative):
+Using Apache OpenNLP library, I designed a Java module to read multiple documents and learn the syntax, adapt to the writing style and store this information for generating text.
+[FILENAME=input.txt]
+[Text=Using PartOfSpeech=VBG Lemma=use SentimentClass=Neutral]
+[Text=Apache PartOfSpeech=NNP Lemma=Apache SentimentClass=Neutral]
+[Text=OpenNLP PartOfSpeech=NNP Lemma=OpenNLP SentimentClass=Neutral]
+[Text=library PartOfSpeech=NN Lemma=library SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=designed PartOfSpeech=VBD Lemma=design SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=Java PartOfSpeech=NNP Lemma=Java SentimentClass=Neutral]
+[Text=module PartOfSpeech=NN Lemma=module SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=read PartOfSpeech=VB Lemma=read SentimentClass=Neutral]
+[Text=multiple PartOfSpeech=JJ Lemma=multiple SentimentClass=Neutral]
+[Text=documents PartOfSpeech=NNS Lemma=document SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=learn PartOfSpeech=VB Lemma=learn SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=syntax PartOfSpeech=NN Lemma=syntax SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=adapt PartOfSpeech=VBP Lemma=adapt SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=writing PartOfSpeech=VBG Lemma=write SentimentClass=Neutral]
+[Text=style PartOfSpeech=NN Lemma=style SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=store PartOfSpeech=NN Lemma=store SentimentClass=Neutral]
+[Text=this PartOfSpeech=DT Lemma=this SentimentClass=Neutral]
+[Text=information PartOfSpeech=NN Lemma=information SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=generating PartOfSpeech=VBG Lemma=generate SentimentClass=Neutral]
+[Text=text PartOfSpeech=NN Lemma=text SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, Using-1)
+compound(library-4, Apache-2)
+compound(library-4, OpenNLP-3)
+dobj(Using-1, library-4)
+punct(designed-7, ,-5)
+nsubj(designed-7, I-6)
+parataxis(Using-1, designed-7)
+det(module-10, a-8)
+compound(module-10, Java-9)
+dobj(designed-7, module-10)
+mark(read-12, to-11)
+advcl(designed-7, read-12)
+amod(documents-14, multiple-13)
+dobj(read-12, documents-14)
+cc(read-12, and-15)
+conj:and(read-12, learn-16)
+det(syntax-18, the-17)
+dobj(learn-16, syntax-18)
+punct(designed-7, ,-19)
+dep(Using-1, adapt-20)
+case(style-24, to-21)
+det(style-24, the-22)
+amod(style-24, writing-23)
+nmod:to(adapt-20, style-24)
+cc(style-24, and-25)
+conj:and(style-24, store-26)
+det(information-28, this-27)
+nsubj(Using-1, information-28)
+case(text-31, for-29)
+amod(text-31, generating-30)
+nmod:for(information-28, text-31)
+punct(Using-1, .-32)
+
+Sentence #21 (18 tokens, sentiment: Negative):
+Thus, with only with a few words as input, the system can produce well-written compositions.
+[FILENAME=input.txt]
+[Text=Thus PartOfSpeech=RB Lemma=thus SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=only PartOfSpeech=RB Lemma=only SentimentClass=Neutral]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=few PartOfSpeech=JJ Lemma=few SentimentClass=Neutral]
+[Text=words PartOfSpeech=NNS Lemma=word SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=input PartOfSpeech=NN Lemma=input SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=system PartOfSpeech=NN Lemma=system SentimentClass=Neutral]
+[Text=can PartOfSpeech=MD Lemma=can SentimentClass=Neutral]
+[Text=produce PartOfSpeech=VB Lemma=produce SentimentClass=Neutral]
+[Text=well-written PartOfSpeech=JJ Lemma=well-written SentimentClass=Very positive]
+[Text=compositions PartOfSpeech=NNS Lemma=composition SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, produce-15)
+advmod(produce-15, Thus-1)
+punct(produce-15, ,-2)
+case(words-8, with-3)
+advmod(words-8, only-4)
+case(words-8, with-5)
+det(words-8, a-6)
+amod(words-8, few-7)
+nmod:with(produce-15, words-8)
+case(input-10, as-9)
+nmod:as(words-8, input-10)
+punct(produce-15, ,-11)
+det(system-13, the-12)
+nsubj(produce-15, system-13)
+aux(produce-15, can-14)
+amod(compositions-17, well-written-16)
+dobj(produce-15, compositions-17)
+punct(produce-15, .-18)
+
+Sentence #22 (20 tokens, sentiment: Negative):
+This system finds its application in Automated Journalism and can also aid non-native English speakers in drafting well-conscripted compositions.
+[FILENAME=input.txt]
+[Text=This PartOfSpeech=DT Lemma=this SentimentClass=Neutral]
+[Text=system PartOfSpeech=NN Lemma=system SentimentClass=Neutral]
+[Text=finds PartOfSpeech=VBZ Lemma=find SentimentClass=Neutral]
+[Text=its PartOfSpeech=PRP$ Lemma=its SentimentClass=Neutral]
+[Text=application PartOfSpeech=NN Lemma=application SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=Automated PartOfSpeech=NNP Lemma=Automated SentimentClass=Neutral]
+[Text=Journalism PartOfSpeech=NNP Lemma=Journalism SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=can PartOfSpeech=MD Lemma=can SentimentClass=Neutral]
+[Text=also PartOfSpeech=RB Lemma=also SentimentClass=Neutral]
+[Text=aid PartOfSpeech=VB Lemma=aid SentimentClass=Neutral]
+[Text=non-native PartOfSpeech=JJ Lemma=non-native SentimentClass=Neutral]
+[Text=English PartOfSpeech=JJ Lemma=english SentimentClass=Neutral]
+[Text=speakers PartOfSpeech=NNS Lemma=speaker SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=drafting PartOfSpeech=VBG Lemma=draft SentimentClass=Neutral]
+[Text=well-conscripted PartOfSpeech=JJ Lemma=well-conscripted SentimentClass=Neutral]
+[Text=compositions PartOfSpeech=NNS Lemma=composition SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, finds-3)
+det(system-2, This-1)
+nsubj(finds-3, system-2)
+nmod:poss(application-5, its-4)
+dobj(finds-3, application-5)
+case(Journalism-8, in-6)
+compound(Journalism-8, Automated-7)
+nmod:in(finds-3, Journalism-8)
+cc(finds-3, and-9)
+aux(aid-12, can-10)
+advmod(aid-12, also-11)
+conj:and(finds-3, aid-12)
+amod(speakers-15, non-native-13)
+amod(speakers-15, English-14)
+dobj(aid-12, speakers-15)
+mark(drafting-17, in-16)
+advcl(aid-12, drafting-17)
+amod(compositions-19, well-conscripted-18)
+dobj(drafting-17, compositions-19)
+punct(finds-3, .-20)
+
+Sentence #23 (35 tokens, sentiment: Negative):
+In addition, I am currently working on a technical paper to outline a framework to tackle concerns over the viability of adequate water for consumption in the aging water distribution networks of cities.
+[FILENAME=input.txt]
+[Text=In PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=addition PartOfSpeech=NN Lemma=addition SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=am PartOfSpeech=VBP Lemma=be SentimentClass=Neutral]
+[Text=currently PartOfSpeech=RB Lemma=currently SentimentClass=Neutral]
+[Text=working PartOfSpeech=VBG Lemma=work SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=technical PartOfSpeech=JJ Lemma=technical SentimentClass=Neutral]
+[Text=paper PartOfSpeech=NN Lemma=paper SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=outline PartOfSpeech=VB Lemma=outline SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=framework PartOfSpeech=NN Lemma=framework SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=tackle PartOfSpeech=VB Lemma=tackle SentimentClass=Neutral]
+[Text=concerns PartOfSpeech=NNS Lemma=concern SentimentClass=Neutral]
+[Text=over PartOfSpeech=IN Lemma=over SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=viability PartOfSpeech=NN Lemma=viability SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=adequate PartOfSpeech=JJ Lemma=adequate SentimentClass=Neutral]
+[Text=water PartOfSpeech=NN Lemma=water SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=consumption PartOfSpeech=NN Lemma=consumption SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=aging PartOfSpeech=NN Lemma=aging SentimentClass=Neutral]
+[Text=water PartOfSpeech=NN Lemma=water SentimentClass=Neutral]
+[Text=distribution PartOfSpeech=NN Lemma=distribution SentimentClass=Neutral]
+[Text=networks PartOfSpeech=NNS Lemma=network SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=cities PartOfSpeech=NNS Lemma=city SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, working-7)
+case(addition-2, In-1)
+nmod:in(working-7, addition-2)
+punct(working-7, ,-3)
+nsubj(working-7, I-4)
+aux(working-7, am-5)
+advmod(working-7, currently-6)
+case(paper-11, on-8)
+det(paper-11, a-9)
+amod(paper-11, technical-10)
+nmod:on(working-7, paper-11)
+mark(outline-13, to-12)
+xcomp(working-7, outline-13)
+det(framework-15, a-14)
+dobj(outline-13, framework-15)
+mark(tackle-17, to-16)
+acl(framework-15, tackle-17)
+dobj(tackle-17, concerns-18)
+case(viability-21, over-19)
+det(viability-21, the-20)
+nmod:over(concerns-18, viability-21)
+case(water-24, of-22)
+amod(water-24, adequate-23)
+nmod:of(viability-21, water-24)
+case(consumption-26, for-25)
+nmod:for(water-24, consumption-26)
+case(networks-32, in-27)
+det(networks-32, the-28)
+compound(networks-32, aging-29)
+compound(networks-32, water-30)
+compound(networks-32, distribution-31)
+nmod:in(tackle-17, networks-32)
+case(cities-34, of-33)
+nmod:of(networks-32, cities-34)
+punct(working-7, .-35)
+
+Sentence #24 (45 tokens, sentiment: Negative):
+The proposed system takes into account the current water repository, based on which, it generates a plan using neural networks to manage the available water to mitigate the adverse effects of excess water consumption and insufficient water supply over the entire year.
+[FILENAME=input.txt]
+[Text=The PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=proposed PartOfSpeech=JJ Lemma=proposed SentimentClass=Neutral]
+[Text=system PartOfSpeech=NN Lemma=system SentimentClass=Neutral]
+[Text=takes PartOfSpeech=VBZ Lemma=take SentimentClass=Neutral]
+[Text=into PartOfSpeech=IN Lemma=into SentimentClass=Neutral]
+[Text=account PartOfSpeech=NN Lemma=account SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=current PartOfSpeech=JJ Lemma=current SentimentClass=Neutral]
+[Text=water PartOfSpeech=NN Lemma=water SentimentClass=Neutral]
+[Text=repository PartOfSpeech=NN Lemma=repository SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=based PartOfSpeech=VBN Lemma=base SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=which PartOfSpeech=WDT Lemma=which SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=it PartOfSpeech=PRP Lemma=it SentimentClass=Neutral]
+[Text=generates PartOfSpeech=VBZ Lemma=generate SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=plan PartOfSpeech=NN Lemma=plan SentimentClass=Neutral]
+[Text=using PartOfSpeech=VBG Lemma=use SentimentClass=Neutral]
+[Text=neural PartOfSpeech=JJ Lemma=neural SentimentClass=Neutral]
+[Text=networks PartOfSpeech=NNS Lemma=network SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=manage PartOfSpeech=VB Lemma=manage SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=available PartOfSpeech=JJ Lemma=available SentimentClass=Positive]
+[Text=water PartOfSpeech=NN Lemma=water SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=mitigate PartOfSpeech=VB Lemma=mitigate SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=adverse PartOfSpeech=JJ Lemma=adverse SentimentClass=Neutral]
+[Text=effects PartOfSpeech=NNS Lemma=effect SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=excess PartOfSpeech=JJ Lemma=excess SentimentClass=Neutral]
+[Text=water PartOfSpeech=NN Lemma=water SentimentClass=Neutral]
+[Text=consumption PartOfSpeech=NN Lemma=consumption SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=insufficient PartOfSpeech=JJ Lemma=insufficient SentimentClass=Neutral]
+[Text=water PartOfSpeech=NN Lemma=water SentimentClass=Neutral]
+[Text=supply PartOfSpeech=NN Lemma=supply SentimentClass=Neutral]
+[Text=over PartOfSpeech=IN Lemma=over SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=entire PartOfSpeech=JJ Lemma=entire SentimentClass=Neutral]
+[Text=year PartOfSpeech=NN Lemma=year SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, generates-17)
+det(system-3, The-1)
+amod(system-3, proposed-2)
+nsubj(takes-4, system-3)
+ccomp(generates-17, takes-4)
+case(account-6, into-5)
+nmod:into(takes-4, account-6)
+det(repository-10, the-7)
+amod(repository-10, current-8)
+compound(repository-10, water-9)
+dobj(takes-4, repository-10)
+punct(repository-10, ,-11)
+acl(repository-10, based-12)
+case(which-14, on-13)
+nmod:on(based-12, which-14)
+punct(generates-17, ,-15)
+nsubj(generates-17, it-16)
+det(plan-19, a-18)
+dobj(generates-17, plan-19)
+acl(plan-19, using-20)
+amod(networks-22, neural-21)
+dobj(using-20, networks-22)
+mark(manage-24, to-23)
+advcl(using-20, manage-24)
+det(water-27, the-25)
+amod(water-27, available-26)
+dobj(manage-24, water-27)
+mark(mitigate-29, to-28)
+advcl(manage-24, mitigate-29)
+det(effects-32, the-30)
+amod(effects-32, adverse-31)
+dobj(mitigate-29, effects-32)
+case(consumption-36, of-33)
+amod(consumption-36, excess-34)
+compound(consumption-36, water-35)
+nmod:of(effects-32, consumption-36)
+cc(consumption-36, and-37)
+amod(supply-40, insufficient-38)
+compound(supply-40, water-39)
+conj:and(consumption-36, supply-40)
+case(year-44, over-41)
+det(year-44, the-42)
+amod(year-44, entire-43)
+nmod:over(consumption-36, year-44)
+punct(generates-17, .-45)
+
+Sentence #25 (26 tokens, sentiment: Positive):
+The model constructed is being tested on the water distribution architecture of the city of Mumbai and will serve as a glowing example of AI.
+[FILENAME=input.txt]
+[Text=The PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=model PartOfSpeech=NN Lemma=model SentimentClass=Positive]
+[Text=constructed PartOfSpeech=VBN Lemma=construct SentimentClass=Neutral]
+[Text=is PartOfSpeech=VBZ Lemma=be SentimentClass=Neutral]
+[Text=being PartOfSpeech=VBG Lemma=be SentimentClass=Neutral]
+[Text=tested PartOfSpeech=VBN Lemma=test SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=water PartOfSpeech=NN Lemma=water SentimentClass=Neutral]
+[Text=distribution PartOfSpeech=NN Lemma=distribution SentimentClass=Neutral]
+[Text=architecture PartOfSpeech=NN Lemma=architecture SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=city PartOfSpeech=NN Lemma=city SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=Mumbai PartOfSpeech=NNP Lemma=Mumbai SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=will PartOfSpeech=MD Lemma=will SentimentClass=Neutral]
+[Text=serve PartOfSpeech=VB Lemma=serve SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=glowing PartOfSpeech=JJ Lemma=glowing SentimentClass=Neutral]
+[Text=example PartOfSpeech=NN Lemma=example SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=AI PartOfSpeech=NNP Lemma=AI SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, tested-6)
+det(model-2, The-1)
+nsubjpass(tested-6, model-2)
+acl(model-2, constructed-3)
+aux(tested-6, is-4)
+auxpass(tested-6, being-5)
+case(architecture-11, on-7)
+det(architecture-11, the-8)
+compound(architecture-11, water-9)
+compound(architecture-11, distribution-10)
+nmod:on(tested-6, architecture-11)
+case(city-14, of-12)
+det(city-14, the-13)
+nmod:of(architecture-11, city-14)
+case(Mumbai-16, of-15)
+nmod:of(city-14, Mumbai-16)
+cc(tested-6, and-17)
+aux(serve-19, will-18)
+conj:and(tested-6, serve-19)
+case(example-23, as-20)
+det(example-23, a-21)
+amod(example-23, glowing-22)
+nmod:as(serve-19, example-23)
+case(AI-25, of-24)
+nmod:of(example-23, AI-25)
+punct(tested-6, .-26)
+
+Sentence #26 (28 tokens, sentiment: Negative):
+To supplement my academic knowledge and gain professional experience, I interned at Talec Industries and was a part of their “Manufacturing Automation Project” team.
+[FILENAME=input.txt]
+[Text=To PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=supplement PartOfSpeech=VB Lemma=supplement SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=academic PartOfSpeech=JJ Lemma=academic SentimentClass=Positive]
+[Text=knowledge PartOfSpeech=NN Lemma=knowledge SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=gain PartOfSpeech=NN Lemma=gain SentimentClass=Neutral]
+[Text=professional PartOfSpeech=JJ Lemma=professional SentimentClass=Positive]
+[Text=experience PartOfSpeech=NN Lemma=experience SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=interned PartOfSpeech=VBD Lemma=intern SentimentClass=Neutral]
+[Text=at PartOfSpeech=IN Lemma=at SentimentClass=Neutral]
+[Text=Talec PartOfSpeech=NNP Lemma=Talec SentimentClass=Neutral]
+[Text=Industries PartOfSpeech=NNPS Lemma=Industries SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=was PartOfSpeech=VBD Lemma=be SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=part PartOfSpeech=NN Lemma=part SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=their PartOfSpeech=PRP$ Lemma=they SentimentClass=Neutral]
+[Text=`` PartOfSpeech=`` Lemma=`` SentimentClass=Neutral]
+[Text=Manufacturing PartOfSpeech=NNP Lemma=Manufacturing SentimentClass=Neutral]
+[Text=Automation PartOfSpeech=NNP Lemma=Automation SentimentClass=Neutral]
+[Text=Project PartOfSpeech=NNP Lemma=Project SentimentClass=Neutral]
+[Text='' PartOfSpeech='' Lemma='' SentimentClass=Neutral]
+[Text=team PartOfSpeech=NN Lemma=team SentimentClass=Positive]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, interned-12)
+mark(supplement-2, To-1)
+advcl(interned-12, supplement-2)
+nmod:poss(knowledge-5, my-3)
+amod(knowledge-5, academic-4)
+dobj(supplement-2, knowledge-5)
+cc(knowledge-5, and-6)
+compound(experience-9, gain-7)
+amod(experience-9, professional-8)
+conj:and(knowledge-5, experience-9)
+punct(interned-12, ,-10)
+nsubj(interned-12, I-11)
+case(Industries-15, at-13)
+compound(Industries-15, Talec-14)
+nmod:at(interned-12, Industries-15)
+cc(interned-12, and-16)
+cop(part-19, was-17)
+det(part-19, a-18)
+conj:and(interned-12, part-19)
+case(team-27, of-20)
+nmod:poss(team-27, their-21)
+punct(team-27, ``-22)
+compound(team-27, Manufacturing-23)
+compound(team-27, Automation-24)
+compound(team-27, Project-25)
+punct(team-27, ''-26)
+nmod:of(part-19, team-27)
+punct(interned-12, .-28)
+
+Sentence #27 (23 tokens, sentiment: Negative):
+After working on planning the electrical architecture, I was involved with algorithm development for VAL system used to control the machines.
+[FILENAME=input.txt]
+[Text=After PartOfSpeech=IN Lemma=after SentimentClass=Neutral]
+[Text=working PartOfSpeech=VBG Lemma=work SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=planning PartOfSpeech=VBG Lemma=plan SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=electrical PartOfSpeech=JJ Lemma=electrical SentimentClass=Neutral]
+[Text=architecture PartOfSpeech=NN Lemma=architecture SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=was PartOfSpeech=VBD Lemma=be SentimentClass=Neutral]
+[Text=involved PartOfSpeech=VBN Lemma=involve SentimentClass=Neutral]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=algorithm PartOfSpeech=NN Lemma=algorithm SentimentClass=Neutral]
+[Text=development PartOfSpeech=NN Lemma=development SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=VAL PartOfSpeech=NN Lemma=val SentimentClass=Neutral]
+[Text=system PartOfSpeech=NN Lemma=system SentimentClass=Neutral]
+[Text=used PartOfSpeech=VBN Lemma=use SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=control PartOfSpeech=VB Lemma=control SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=machines PartOfSpeech=NNS Lemma=machine SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, involved-11)
+mark(working-2, After-1)
+advcl(involved-11, working-2)
+mark(planning-4, on-3)
+advcl(working-2, planning-4)
+det(architecture-7, the-5)
+amod(architecture-7, electrical-6)
+dobj(planning-4, architecture-7)
+punct(involved-11, ,-8)
+nsubjpass(involved-11, I-9)
+auxpass(involved-11, was-10)
+case(development-14, with-12)
+compound(development-14, algorithm-13)
+nmod:with(involved-11, development-14)
+case(system-17, for-15)
+compound(system-17, VAL-16)
+nmod:for(involved-11, system-17)
+acl(system-17, used-18)
+mark(control-20, to-19)
+xcomp(used-18, control-20)
+det(machines-22, the-21)
+dobj(control-20, machines-22)
+punct(involved-11, .-23)
+
+Sentence #28 (24 tokens, sentiment: Negative):
+Subsequently, I also interned at Lynx Synergy and Solutions wherein I worked on a project on refining computerized network problem detection system.
+[FILENAME=input.txt]
+[Text=Subsequently PartOfSpeech=RB Lemma=subsequently SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=also PartOfSpeech=RB Lemma=also SentimentClass=Neutral]
+[Text=interned PartOfSpeech=VBD Lemma=intern SentimentClass=Neutral]
+[Text=at PartOfSpeech=IN Lemma=at SentimentClass=Neutral]
+[Text=Lynx PartOfSpeech=NNP Lemma=Lynx SentimentClass=Neutral]
+[Text=Synergy PartOfSpeech=NN Lemma=synergy SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=Solutions PartOfSpeech=NNPS Lemma=Solutions SentimentClass=Neutral]
+[Text=wherein PartOfSpeech=WRB Lemma=wherein SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=worked PartOfSpeech=VBD Lemma=work SentimentClass=Positive]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=project PartOfSpeech=NN Lemma=project SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=refining PartOfSpeech=NN Lemma=refining SentimentClass=Neutral]
+[Text=computerized PartOfSpeech=JJ Lemma=computerized SentimentClass=Neutral]
+[Text=network PartOfSpeech=NN Lemma=network SentimentClass=Neutral]
+[Text=problem PartOfSpeech=NN Lemma=problem SentimentClass=Negative]
+[Text=detection PartOfSpeech=NN Lemma=detection SentimentClass=Neutral]
+[Text=system PartOfSpeech=NN Lemma=system SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, interned-5)
+advmod(interned-5, Subsequently-1)
+punct(interned-5, ,-2)
+nsubj(interned-5, I-3)
+advmod(interned-5, also-4)
+case(Synergy-8, at-6)
+compound(Synergy-8, Lynx-7)
+nmod:at(interned-5, Synergy-8)
+cc(Synergy-8, and-9)
+conj:and(Synergy-8, Solutions-10)
+advmod(worked-13, wherein-11)
+nsubj(worked-13, I-12)
+advcl(interned-5, worked-13)
+case(project-16, on-14)
+det(project-16, a-15)
+nmod:on(worked-13, project-16)
+case(network-20, on-17)
+compound(network-20, refining-18)
+amod(network-20, computerized-19)
+nmod:on(worked-13, network-20)
+compound(system-23, problem-21)
+compound(system-23, detection-22)
+dep(network-20, system-23)
+punct(interned-5, .-24)
+
+Sentence #29 (32 tokens, sentiment: Negative):
+Studying an already implemented and inadequately documented project was initially challenging, but in two months’ time, our team was able to eliminate major flaws and redesign the software.
+[FILENAME=input.txt]
+[Text=Studying PartOfSpeech=VBG Lemma=study SentimentClass=Neutral]
+[Text=an PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=already PartOfSpeech=RB Lemma=already SentimentClass=Neutral]
+[Text=implemented PartOfSpeech=VBN Lemma=implement SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=inadequately PartOfSpeech=RB Lemma=inadequately SentimentClass=Negative]
+[Text=documented PartOfSpeech=VBN Lemma=document SentimentClass=Neutral]
+[Text=project PartOfSpeech=NN Lemma=project SentimentClass=Neutral]
+[Text=was PartOfSpeech=VBD Lemma=be SentimentClass=Neutral]
+[Text=initially PartOfSpeech=RB Lemma=initially SentimentClass=Neutral]
+[Text=challenging PartOfSpeech=JJ Lemma=challenging SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=but PartOfSpeech=CC Lemma=but SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=two PartOfSpeech=CD Lemma=two SentimentClass=Neutral]
+[Text=months PartOfSpeech=NNS Lemma=month SentimentClass=Neutral]
+[Text=' PartOfSpeech=POS Lemma=' SentimentClass=Neutral]
+[Text=time PartOfSpeech=NN Lemma=time SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=our PartOfSpeech=PRP$ Lemma=we SentimentClass=Neutral]
+[Text=team PartOfSpeech=NN Lemma=team SentimentClass=Positive]
+[Text=was PartOfSpeech=VBD Lemma=be SentimentClass=Neutral]
+[Text=able PartOfSpeech=JJ Lemma=able SentimentClass=Positive]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=eliminate PartOfSpeech=VB Lemma=eliminate SentimentClass=Neutral]
+[Text=major PartOfSpeech=JJ Lemma=major SentimentClass=Neutral]
+[Text=flaws PartOfSpeech=NNS Lemma=flaw SentimentClass=Negative]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=redesign PartOfSpeech=VB Lemma=redesign SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=software PartOfSpeech=NN Lemma=software SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, challenging-11)
+csubj(challenging-11, Studying-1)
+det(project-8, an-2)
+advmod(implemented-4, already-3)
+amod(project-8, implemented-4)
+cc(implemented-4, and-5)
+advmod(documented-7, inadequately-6)
+conj:and(implemented-4, documented-7)
+dobj(Studying-1, project-8)
+cop(challenging-11, was-9)
+advmod(challenging-11, initially-10)
+punct(challenging-11, ,-12)
+cc(challenging-11, but-13)
+case(time-18, in-14)
+nummod(months-16, two-15)
+nmod:poss(time-18, months-16)
+case(months-16, '-17)
+nmod:in(able-23, time-18)
+punct(able-23, ,-19)
+nmod:poss(team-21, our-20)
+nsubj(able-23, team-21)
+cop(able-23, was-22)
+conj:but(challenging-11, able-23)
+mark(eliminate-25, to-24)
+xcomp(able-23, eliminate-25)
+amod(flaws-27, major-26)
+dobj(eliminate-25, flaws-27)
+cc(eliminate-25, and-28)
+conj:and(eliminate-25, redesign-29)
+det(software-31, the-30)
+dobj(redesign-29, software-31)
+punct(challenging-11, .-32)
+
+Sentence #30 (23 tokens, sentiment: Negative):
+Apart from my academic and technical endeavours, I always strove to develop a well-rounded personality by actively participating in extracurricular activities.
+[FILENAME=input.txt]
+[Text=Apart PartOfSpeech=RB Lemma=apart SentimentClass=Neutral]
+[Text=from PartOfSpeech=IN Lemma=from SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=academic PartOfSpeech=JJ Lemma=academic SentimentClass=Positive]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=technical PartOfSpeech=JJ Lemma=technical SentimentClass=Neutral]
+[Text=endeavours PartOfSpeech=NNS Lemma=endeavour SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=always PartOfSpeech=RB Lemma=always SentimentClass=Neutral]
+[Text=strove PartOfSpeech=VBP Lemma=strive SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=develop PartOfSpeech=VB Lemma=develop SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=well-rounded PartOfSpeech=JJ Lemma=well-rounded SentimentClass=Positive]
+[Text=personality PartOfSpeech=NN Lemma=personality SentimentClass=Positive]
+[Text=by PartOfSpeech=IN Lemma=by SentimentClass=Neutral]
+[Text=actively PartOfSpeech=RB Lemma=actively SentimentClass=Neutral]
+[Text=participating PartOfSpeech=VBG Lemma=participate SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=extracurricular PartOfSpeech=JJ Lemma=extracurricular SentimentClass=Neutral]
+[Text=activities PartOfSpeech=NNS Lemma=activity SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, strove-11)
+case(endeavours-7, Apart-1)
+mwe(Apart-1, from-2)
+nmod:poss(endeavours-7, my-3)
+amod(endeavours-7, academic-4)
+cc(academic-4, and-5)
+conj:and(academic-4, technical-6)
+nmod:apart_from(strove-11, endeavours-7)
+punct(strove-11, ,-8)
+nsubj(strove-11, I-9)
+advmod(strove-11, always-10)
+mark(develop-13, to-12)
+xcomp(strove-11, develop-13)
+det(personality-16, a-14)
+amod(personality-16, well-rounded-15)
+dobj(develop-13, personality-16)
+mark(participating-19, by-17)
+advmod(participating-19, actively-18)
+advcl(develop-13, participating-19)
+case(activities-22, in-20)
+amod(activities-22, extracurricular-21)
+nmod:in(participating-19, activities-22)
+punct(strove-11, .-23)
+
+Sentence #31 (33 tokens, sentiment: Negative):
+I was part of six different student bodies and was elected as the Technical Head of Computer Engineers Student Society and the Event Management Secretary for the RGIT Computer Society of India.
+[FILENAME=input.txt]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=was PartOfSpeech=VBD Lemma=be SentimentClass=Neutral]
+[Text=part PartOfSpeech=NN Lemma=part SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=six PartOfSpeech=CD Lemma=six SentimentClass=Neutral]
+[Text=different PartOfSpeech=JJ Lemma=different SentimentClass=Neutral]
+[Text=student PartOfSpeech=NN Lemma=student SentimentClass=Neutral]
+[Text=bodies PartOfSpeech=NNS Lemma=body SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=was PartOfSpeech=VBD Lemma=be SentimentClass=Neutral]
+[Text=elected PartOfSpeech=VBN Lemma=elect SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=Technical PartOfSpeech=NNP Lemma=Technical SentimentClass=Neutral]
+[Text=Head PartOfSpeech=NNP Lemma=Head SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=Computer PartOfSpeech=NNP Lemma=Computer SentimentClass=Neutral]
+[Text=Engineers PartOfSpeech=NNPS Lemma=Engineers SentimentClass=Neutral]
+[Text=Student PartOfSpeech=NNP Lemma=Student SentimentClass=Neutral]
+[Text=Society PartOfSpeech=NNP Lemma=Society SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=Event PartOfSpeech=NNP Lemma=Event SentimentClass=Neutral]
+[Text=Management PartOfSpeech=NNP Lemma=Management SentimentClass=Neutral]
+[Text=Secretary PartOfSpeech=NNP Lemma=Secretary SentimentClass=Positive]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=RGIT PartOfSpeech=NNP Lemma=RGIT SentimentClass=Neutral]
+[Text=Computer PartOfSpeech=NNP Lemma=Computer SentimentClass=Neutral]
+[Text=Society PartOfSpeech=NNP Lemma=Society SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=India PartOfSpeech=NNP Lemma=India SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, part-3)
+nsubj(part-3, I-1)
+cop(part-3, was-2)
+case(bodies-8, of-4)
+nummod(bodies-8, six-5)
+amod(bodies-8, different-6)
+compound(bodies-8, student-7)
+nmod:of(part-3, bodies-8)
+cc(part-3, and-9)
+auxpass(elected-11, was-10)
+conj:and(part-3, elected-11)
+case(Head-15, as-12)
+det(Head-15, the-13)
+compound(Head-15, Technical-14)
+nmod:as(elected-11, Head-15)
+case(Society-20, of-16)
+compound(Society-20, Computer-17)
+compound(Society-20, Engineers-18)
+compound(Society-20, Student-19)
+nmod:of(Head-15, Society-20)
+cc(Head-15, and-21)
+det(Secretary-25, the-22)
+compound(Secretary-25, Event-23)
+compound(Secretary-25, Management-24)
+conj:and(Head-15, Secretary-25)
+case(Society-30, for-26)
+det(Society-30, the-27)
+compound(Society-30, RGIT-28)
+compound(Society-30, Computer-29)
+nmod:for(Secretary-25, Society-30)
+case(India-32, of-31)
+nmod:of(Society-30, India-32)
+punct(part-3, .-33)
+
+Sentence #32 (24 tokens, sentiment: Negative):
+As part of these committees, I conducted multiple workshops such as Android App development, Ethical Hacking and Robotics based on Arduino.
+[FILENAME=input.txt]
+[Text=As PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=part PartOfSpeech=NN Lemma=part SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=these PartOfSpeech=DT Lemma=these SentimentClass=Neutral]
+[Text=committees PartOfSpeech=NNS Lemma=committee SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=conducted PartOfSpeech=VBD Lemma=conduct SentimentClass=Neutral]
+[Text=multiple PartOfSpeech=JJ Lemma=multiple SentimentClass=Neutral]
+[Text=workshops PartOfSpeech=NNS Lemma=workshop SentimentClass=Neutral]
+[Text=such PartOfSpeech=JJ Lemma=such SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=Android PartOfSpeech=NNP Lemma=Android SentimentClass=Neutral]
+[Text=App PartOfSpeech=NNP Lemma=App SentimentClass=Neutral]
+[Text=development PartOfSpeech=NN Lemma=development SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=Ethical PartOfSpeech=JJ Lemma=ethical SentimentClass=Neutral]
+[Text=Hacking PartOfSpeech=NN Lemma=hacking SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=Robotics PartOfSpeech=NNS Lemma=robotic SentimentClass=Neutral]
+[Text=based PartOfSpeech=VBN Lemma=base SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=Arduino PartOfSpeech=NNP Lemma=Arduino SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, conducted-8)
+case(part-2, As-1)
+nmod:as(conducted-8, part-2)
+case(committees-5, of-3)
+det(committees-5, these-4)
+nmod:of(part-2, committees-5)
+punct(conducted-8, ,-6)
+nsubj(conducted-8, I-7)
+amod(workshops-10, multiple-9)
+dobj(conducted-8, workshops-10)
+case(development-15, such-11)
+mwe(such-11, as-12)
+compound(development-15, Android-13)
+compound(development-15, App-14)
+nmod:such_as(workshops-10, development-15)
+punct(development-15, ,-16)
+amod(Hacking-18, Ethical-17)
+conj:and(development-15, Hacking-18)
+cc(development-15, and-19)
+conj:and(development-15, Robotics-20)
+case(Arduino-23, based-21)
+mwe(based-21, on-22)
+advcl:based_on(conducted-8, Arduino-23)
+punct(conducted-8, .-24)
+
+Sentence #33 (31 tokens, sentiment: Negative):
+I was also appointed as the Secretary General of RGIT Model United Nations (MUN) and organised a city-wide conference, a first in the history of my college.
+[FILENAME=input.txt]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=was PartOfSpeech=VBD Lemma=be SentimentClass=Neutral]
+[Text=also PartOfSpeech=RB Lemma=also SentimentClass=Neutral]
+[Text=appointed PartOfSpeech=VBN Lemma=appoint SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=Secretary PartOfSpeech=NNP Lemma=Secretary SentimentClass=Positive]
+[Text=General PartOfSpeech=NNP Lemma=General SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=RGIT PartOfSpeech=NNP Lemma=RGIT SentimentClass=Neutral]
+[Text=Model PartOfSpeech=NNP Lemma=Model SentimentClass=Neutral]
+[Text=United PartOfSpeech=NNP Lemma=United SentimentClass=Neutral]
+[Text=Nations PartOfSpeech=NNP Lemma=Nations SentimentClass=Neutral]
+[Text=-LRB- PartOfSpeech=-LRB- Lemma=-lrb- SentimentClass=Neutral]
+[Text=MUN PartOfSpeech=NNP Lemma=MUN SentimentClass=Neutral]
+[Text=-RRB- PartOfSpeech=-RRB- Lemma=-rrb- SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=organised PartOfSpeech=VBD Lemma=organise SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=city-wide PartOfSpeech=JJ Lemma=city-wide SentimentClass=Neutral]
+[Text=conference PartOfSpeech=NN Lemma=conference SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=first PartOfSpeech=JJ Lemma=first SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=history PartOfSpeech=NN Lemma=history SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=college PartOfSpeech=NN Lemma=college SentimentClass=Positive]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, appointed-4)
+nsubjpass(appointed-4, I-1)
+auxpass(appointed-4, was-2)
+advmod(appointed-4, also-3)
+case(General-8, as-5)
+det(General-8, the-6)
+compound(General-8, Secretary-7)
+nmod:as(appointed-4, General-8)
+case(Nations-13, of-9)
+compound(Nations-13, RGIT-10)
+compound(Nations-13, Model-11)
+compound(Nations-13, United-12)
+nmod:of(General-8, Nations-13)
+punct(MUN-15, -LRB--14)
+appos(Nations-13, MUN-15)
+punct(MUN-15, -RRB--16)
+cc(appointed-4, and-17)
+conj:and(appointed-4, organised-18)
+det(conference-21, a-19)
+amod(conference-21, city-wide-20)
+dobj(organised-18, conference-21)
+punct(conference-21, ,-22)
+det(first-24, a-23)
+appos(conference-21, first-24)
+case(history-27, in-25)
+det(history-27, the-26)
+nmod:in(first-24, history-27)
+case(college-30, of-28)
+nmod:poss(college-30, my-29)
+nmod:of(history-27, college-30)
+punct(appointed-4, .-31)
+
+Sentence #34 (21 tokens, sentiment: Negative):
+In addition to these, I utilised my free time in teaching under-privileged children and participating in countless coding competitions.
+[FILENAME=input.txt]
+[Text=In PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=addition PartOfSpeech=NN Lemma=addition SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=these PartOfSpeech=DT Lemma=these SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=utilised PartOfSpeech=VBD Lemma=utilise SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=free PartOfSpeech=JJ Lemma=free SentimentClass=Positive]
+[Text=time PartOfSpeech=NN Lemma=time SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=teaching PartOfSpeech=NN Lemma=teaching SentimentClass=Neutral]
+[Text=under-privileged PartOfSpeech=JJ Lemma=under-privileged SentimentClass=Neutral]
+[Text=children PartOfSpeech=NNS Lemma=child SentimentClass=Positive]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=participating PartOfSpeech=VBG Lemma=participate SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=countless PartOfSpeech=JJ Lemma=countless SentimentClass=Neutral]
+[Text=coding PartOfSpeech=VBG Lemma=code SentimentClass=Neutral]
+[Text=competitions PartOfSpeech=NNS Lemma=competition SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, utilised-7)
+case(these-4, In-1)
+mwe(In-1, addition-2)
+mwe(In-1, to-3)
+nmod:in_addition_to(utilised-7, these-4)
+punct(utilised-7, ,-5)
+nsubj(utilised-7, I-6)
+nmod:poss(time-10, my-8)
+amod(time-10, free-9)
+dobj(utilised-7, time-10)
+case(children-14, in-11)
+compound(children-14, teaching-12)
+amod(children-14, under-privileged-13)
+dep(utilised-7, children-14)
+cc(children-14, and-15)
+conj:and(children-14, participating-16)
+case(competitions-20, in-17)
+amod(competitions-20, countless-18)
+amod(competitions-20, coding-19)
+nmod:in(participating-16, competitions-20)
+punct(utilised-7, .-21)
+
+Sentence #35 (25 tokens, sentiment: Negative):
+To date, I have won two competitions and reached the third round of Tata Consultancy Services’ international programming competition ‘Codevita’.
+[FILENAME=input.txt]
+[Text=To PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=date PartOfSpeech=NN Lemma=date SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=have PartOfSpeech=VBP Lemma=have SentimentClass=Neutral]
+[Text=won PartOfSpeech=VBN Lemma=win SentimentClass=Positive]
+[Text=two PartOfSpeech=CD Lemma=two SentimentClass=Neutral]
+[Text=competitions PartOfSpeech=NNS Lemma=competition SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=reached PartOfSpeech=VBD Lemma=reach SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=third PartOfSpeech=JJ Lemma=third SentimentClass=Neutral]
+[Text=round PartOfSpeech=NN Lemma=round SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=Tata PartOfSpeech=NNP Lemma=Tata SentimentClass=Neutral]
+[Text=Consultancy PartOfSpeech=NNP Lemma=Consultancy SentimentClass=Neutral]
+[Text=Services PartOfSpeech=NNP Lemma=Services SentimentClass=Neutral]
+[Text=' PartOfSpeech=POS Lemma=' SentimentClass=Neutral]
+[Text=international PartOfSpeech=JJ Lemma=international SentimentClass=Neutral]
+[Text=programming PartOfSpeech=NN Lemma=programming SentimentClass=Neutral]
+[Text=competition PartOfSpeech=NN Lemma=competition SentimentClass=Neutral]
+[Text=` PartOfSpeech=`` Lemma=` SentimentClass=Neutral]
+[Text=Codevita PartOfSpeech=NNP Lemma=Codevita SentimentClass=Neutral]
+[Text=' PartOfSpeech='' Lemma=' SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, won-6)
+case(date-2, To-1)
+nmod:to(won-6, date-2)
+punct(won-6, ,-3)
+nsubj(won-6, I-4)
+aux(won-6, have-5)
+nummod(competitions-8, two-7)
+dobj(won-6, competitions-8)
+cc(won-6, and-9)
+conj:and(won-6, reached-10)
+det(round-13, the-11)
+amod(round-13, third-12)
+dobj(reached-10, round-13)
+case(competition-21, of-14)
+compound(Services-17, Tata-15)
+compound(Services-17, Consultancy-16)
+nmod:poss(competition-21, Services-17)
+case(Services-17, '-18)
+amod(competition-21, international-19)
+compound(competition-21, programming-20)
+nmod:of(round-13, competition-21)
+punct(competition-21, `-22)
+dep(competition-21, Codevita-23)
+punct(competition-21, '-24)
+punct(won-6, .-25)
+
+Sentence #36 (27 tokens, sentiment: Positive):
+All these endeavours coupled with my strong undergraduate education make me a good fit for the Master’s program at the University of California Los Angeles.
+[FILENAME=input.txt]
+[Text=All PartOfSpeech=PDT Lemma=all SentimentClass=Neutral]
+[Text=these PartOfSpeech=DT Lemma=these SentimentClass=Neutral]
+[Text=endeavours PartOfSpeech=NNS Lemma=endeavour SentimentClass=Neutral]
+[Text=coupled PartOfSpeech=VBN Lemma=couple SentimentClass=Neutral]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=strong PartOfSpeech=JJ Lemma=strong SentimentClass=Positive]
+[Text=undergraduate PartOfSpeech=JJ Lemma=undergraduate SentimentClass=Neutral]
+[Text=education PartOfSpeech=NN Lemma=education SentimentClass=Neutral]
+[Text=make PartOfSpeech=VB Lemma=make SentimentClass=Neutral]
+[Text=me PartOfSpeech=PRP Lemma=I SentimentClass=Positive]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=good PartOfSpeech=JJ Lemma=good SentimentClass=Positive]
+[Text=fit PartOfSpeech=NN Lemma=fit SentimentClass=Positive]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=Master PartOfSpeech=NN Lemma=master SentimentClass=Neutral]
+[Text='s PartOfSpeech=POS Lemma='s SentimentClass=Neutral]
+[Text=program PartOfSpeech=NN Lemma=program SentimentClass=Neutral]
+[Text=at PartOfSpeech=IN Lemma=at SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=University PartOfSpeech=NNP Lemma=University SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=California PartOfSpeech=NNP Lemma=California SentimentClass=Neutral]
+[Text=Los PartOfSpeech=NNP Lemma=Los SentimentClass=Neutral]
+[Text=Angeles PartOfSpeech=NNP Lemma=Angeles SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, make-10)
+det:predet(endeavours-3, All-1)
+det(endeavours-3, these-2)
+nsubj(make-10, endeavours-3)
+acl(endeavours-3, coupled-4)
+case(education-9, with-5)
+nmod:poss(education-9, my-6)
+amod(education-9, strong-7)
+amod(education-9, undergraduate-8)
+nmod:with(coupled-4, education-9)
+nsubj(fit-14, me-11)
+det(fit-14, a-12)
+amod(fit-14, good-13)
+xcomp(make-10, fit-14)
+case(program-19, for-15)
+det(Master-17, the-16)
+nmod:poss(program-19, Master-17)
+case(Master-17, 's-18)
+nmod:for(fit-14, program-19)
+case(University-22, at-20)
+det(University-22, the-21)
+nmod:at(program-19, University-22)
+case(Angeles-26, of-23)
+compound(Angeles-26, California-24)
+compound(Angeles-26, Los-25)
+nmod:of(University-22, Angeles-26)
+punct(make-10, .-27)
+
+Sentence #37 (32 tokens, sentiment: Neutral):
+UCLA’s comprehensive curriculum with courses in Machine Learning, Natural Language Processing (NLP), Expert System Development and Parallel Architecture are in perfect resonance with my academic interests.
+[FILENAME=input.txt]
+[Text=UCLA PartOfSpeech=NNP Lemma=UCLA SentimentClass=Neutral]
+[Text='s PartOfSpeech=POS Lemma='s SentimentClass=Neutral]
+[Text=comprehensive PartOfSpeech=JJ Lemma=comprehensive SentimentClass=Neutral]
+[Text=curriculum PartOfSpeech=NN Lemma=curriculum SentimentClass=Neutral]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=courses PartOfSpeech=NNS Lemma=course SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=Machine PartOfSpeech=NN Lemma=machine SentimentClass=Neutral]
+[Text=Learning PartOfSpeech=NNP Lemma=Learning SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=Natural PartOfSpeech=NNP Lemma=Natural SentimentClass=Neutral]
+[Text=Language PartOfSpeech=NNP Lemma=Language SentimentClass=Neutral]
+[Text=Processing PartOfSpeech=NNP Lemma=Processing SentimentClass=Neutral]
+[Text=-LRB- PartOfSpeech=-LRB- Lemma=-lrb- SentimentClass=Neutral]
+[Text=NLP PartOfSpeech=NNP Lemma=NLP SentimentClass=Neutral]
+[Text=-RRB- PartOfSpeech=-RRB- Lemma=-rrb- SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=Expert PartOfSpeech=NNP Lemma=Expert SentimentClass=Neutral]
+[Text=System PartOfSpeech=NNP Lemma=System SentimentClass=Neutral]
+[Text=Development PartOfSpeech=NNP Lemma=Development SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=Parallel PartOfSpeech=JJ Lemma=parallel SentimentClass=Neutral]
+[Text=Architecture PartOfSpeech=NNP Lemma=Architecture SentimentClass=Neutral]
+[Text=are PartOfSpeech=VBP Lemma=be SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=perfect PartOfSpeech=JJ Lemma=perfect SentimentClass=Very positive]
+[Text=resonance PartOfSpeech=NN Lemma=resonance SentimentClass=Positive]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=academic PartOfSpeech=JJ Lemma=academic SentimentClass=Positive]
+[Text=interests PartOfSpeech=NNS Lemma=interest SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, resonance-27)
+nmod:poss(curriculum-4, UCLA-1)
+case(UCLA-1, 's-2)
+amod(curriculum-4, comprehensive-3)
+nsubj(resonance-27, curriculum-4)
+case(courses-6, with-5)
+nmod:with(curriculum-4, courses-6)
+case(Learning-9, in-7)
+compound(Learning-9, Machine-8)
+nmod:in(courses-6, Learning-9)
+punct(Learning-9, ,-10)
+compound(Processing-13, Natural-11)
+compound(Processing-13, Language-12)
+conj:and(Learning-9, Processing-13)
+punct(NLP-15, -LRB--14)
+appos(Learning-9, NLP-15)
+punct(NLP-15, -RRB--16)
+punct(Learning-9, ,-17)
+compound(Development-20, Expert-18)
+compound(Development-20, System-19)
+conj:and(Learning-9, Development-20)
+cc(Learning-9, and-21)
+amod(Architecture-23, Parallel-22)
+conj:and(Learning-9, Architecture-23)
+cop(resonance-27, are-24)
+case(resonance-27, in-25)
+amod(resonance-27, perfect-26)
+case(interests-31, with-28)
+nmod:poss(interests-31, my-29)
+amod(interests-31, academic-30)
+nmod:with(resonance-27, interests-31)
+punct(resonance-27, .-32)
+
+Sentence #38 (24 tokens, sentiment: Negative):
+Learning from world renowned professors like Prof. Michael G. Dyer and Prof. Richard Korf, would significantly add to my repertoire of knowledge.
+[FILENAME=input.txt]
+[Text=Learning PartOfSpeech=NNP Lemma=Learning SentimentClass=Neutral]
+[Text=from PartOfSpeech=IN Lemma=from SentimentClass=Neutral]
+[Text=world PartOfSpeech=NN Lemma=world SentimentClass=Neutral]
+[Text=renowned PartOfSpeech=JJ Lemma=renowned SentimentClass=Positive]
+[Text=professors PartOfSpeech=NNS Lemma=professor SentimentClass=Neutral]
+[Text=like PartOfSpeech=IN Lemma=like SentimentClass=Neutral]
+[Text=Prof. PartOfSpeech=NNP Lemma=Prof. SentimentClass=Neutral]
+[Text=Michael PartOfSpeech=NNP Lemma=Michael SentimentClass=Neutral]
+[Text=G. PartOfSpeech=NNP Lemma=G. SentimentClass=Neutral]
+[Text=Dyer PartOfSpeech=NNP Lemma=Dyer SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=Prof. PartOfSpeech=NNP Lemma=Prof. SentimentClass=Neutral]
+[Text=Richard PartOfSpeech=NNP Lemma=Richard SentimentClass=Neutral]
+[Text=Korf PartOfSpeech=NNP Lemma=Korf SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=would PartOfSpeech=MD Lemma=would SentimentClass=Neutral]
+[Text=significantly PartOfSpeech=RB Lemma=significantly SentimentClass=Neutral]
+[Text=add PartOfSpeech=VB Lemma=add SentimentClass=Positive]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=repertoire PartOfSpeech=NN Lemma=repertoire SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=knowledge PartOfSpeech=NN Lemma=knowledge SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, add-18)
+nsubj(add-18, Learning-1)
+case(world-3, from-2)
+nmod:from(Learning-1, world-3)
+amod(professors-5, renowned-4)
+dep(Learning-1, professors-5)
+case(Dyer-10, like-6)
+compound(Dyer-10, Prof.-7)
+compound(Dyer-10, Michael-8)
+compound(Dyer-10, G.-9)
+nmod:like(professors-5, Dyer-10)
+cc(Dyer-10, and-11)
+compound(Korf-14, Prof.-12)
+compound(Korf-14, Richard-13)
+conj:and(Dyer-10, Korf-14)
+punct(Learning-1, ,-15)
+aux(add-18, would-16)
+advmod(add-18, significantly-17)
+case(repertoire-21, to-19)
+nmod:poss(repertoire-21, my-20)
+nmod:to(add-18, repertoire-21)
+case(knowledge-23, of-22)
+nmod:of(repertoire-21, knowledge-23)
+punct(add-18, .-24)
+
+Sentence #39 (26 tokens, sentiment: Negative):
+If given the opportunity, I would be honoured to assist them in their research in the field of NLP and heuristic search, respectively.
+[FILENAME=input.txt]
+[Text=If PartOfSpeech=IN Lemma=if SentimentClass=Neutral]
+[Text=given PartOfSpeech=VBN Lemma=give SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=opportunity PartOfSpeech=NN Lemma=opportunity SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=would PartOfSpeech=MD Lemma=would SentimentClass=Neutral]
+[Text=be PartOfSpeech=VB Lemma=be SentimentClass=Neutral]
+[Text=honoured PartOfSpeech=VBN Lemma=honour SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=assist PartOfSpeech=VB Lemma=assist SentimentClass=Neutral]
+[Text=them PartOfSpeech=PRP Lemma=they SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=their PartOfSpeech=PRP$ Lemma=they SentimentClass=Neutral]
+[Text=research PartOfSpeech=NN Lemma=research SentimentClass=Neutral]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=field PartOfSpeech=NN Lemma=field SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=NLP PartOfSpeech=NN Lemma=nlp SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=heuristic PartOfSpeech=NN Lemma=heuristic SentimentClass=Neutral]
+[Text=search PartOfSpeech=NN Lemma=search SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=respectively PartOfSpeech=RB Lemma=respectively SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, honoured-9)
+mark(given-2, If-1)
+advcl(honoured-9, given-2)
+det(opportunity-4, the-3)
+dobj(given-2, opportunity-4)
+punct(honoured-9, ,-5)
+nsubjpass(honoured-9, I-6)
+aux(honoured-9, would-7)
+auxpass(honoured-9, be-8)
+mark(assist-11, to-10)
+xcomp(honoured-9, assist-11)
+dobj(assist-11, them-12)
+case(research-15, in-13)
+nmod:poss(research-15, their-14)
+nmod:in(assist-11, research-15)
+case(field-18, in-16)
+det(field-18, the-17)
+nmod:in(research-15, field-18)
+case(search-23, of-19)
+compound(search-23, NLP-20)
+cc(NLP-20, and-21)
+conj:and(NLP-20, heuristic-22)
+nmod:of(field-18, search-23)
+punct(honoured-9, ,-24)
+advmod(honoured-9, respectively-25)
+punct(honoured-9, .-26)
+
+Sentence #40 (32 tokens, sentiment: Negative):
+In addition, I am more than excited to be a part of the diverse student committees such as UCLA eGSA and UCLA ACM and keen on collaborating with fellow peers.
+[FILENAME=input.txt]
+[Text=In PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=addition PartOfSpeech=NN Lemma=addition SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=am PartOfSpeech=VBP Lemma=be SentimentClass=Neutral]
+[Text=more PartOfSpeech=JJR Lemma=more SentimentClass=Neutral]
+[Text=than PartOfSpeech=IN Lemma=than SentimentClass=Neutral]
+[Text=excited PartOfSpeech=VBN Lemma=excite SentimentClass=Positive]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=be PartOfSpeech=VB Lemma=be SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=part PartOfSpeech=NN Lemma=part SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=diverse PartOfSpeech=JJ Lemma=diverse SentimentClass=Positive]
+[Text=student PartOfSpeech=NN Lemma=student SentimentClass=Neutral]
+[Text=committees PartOfSpeech=NNS Lemma=committee SentimentClass=Neutral]
+[Text=such PartOfSpeech=JJ Lemma=such SentimentClass=Neutral]
+[Text=as PartOfSpeech=IN Lemma=as SentimentClass=Neutral]
+[Text=UCLA PartOfSpeech=NNP Lemma=UCLA SentimentClass=Neutral]
+[Text=eGSA PartOfSpeech=NNP Lemma=eGSA SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=UCLA PartOfSpeech=NNP Lemma=UCLA SentimentClass=Neutral]
+[Text=ACM PartOfSpeech=NNP Lemma=ACM SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=keen PartOfSpeech=JJ Lemma=keen SentimentClass=Positive]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=collaborating PartOfSpeech=VBG Lemma=collaborate SentimentClass=Neutral]
+[Text=with PartOfSpeech=IN Lemma=with SentimentClass=Neutral]
+[Text=fellow PartOfSpeech=JJ Lemma=fellow SentimentClass=Neutral]
+[Text=peers PartOfSpeech=NNS Lemma=peer SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, excited-8)
+case(addition-2, In-1)
+nmod:in(excited-8, addition-2)
+punct(excited-8, ,-3)
+nsubj(excited-8, I-4)
+cop(excited-8, am-5)
+advmod(excited-8, more-6)
+case(more-6, than-7)
+mark(part-12, to-9)
+cop(part-12, be-10)
+det(part-12, a-11)
+xcomp(excited-8, part-12)
+case(committees-17, of-13)
+det(committees-17, the-14)
+amod(committees-17, diverse-15)
+compound(committees-17, student-16)
+nmod:of(part-12, committees-17)
+case(eGSA-21, such-18)
+mwe(such-18, as-19)
+compound(eGSA-21, UCLA-20)
+nmod:such_as(committees-17, eGSA-21)
+cc(eGSA-21, and-22)
+compound(ACM-24, UCLA-23)
+conj:and(eGSA-21, ACM-24)
+cc(excited-8, and-25)
+conj:and(excited-8, keen-26)
+mark(collaborating-28, on-27)
+advcl(keen-26, collaborating-28)
+case(peers-31, with-29)
+amod(peers-31, fellow-30)
+nmod:with(collaborating-28, peers-31)
+punct(excited-8, .-32)
+
+Sentence #41 (40 tokens, sentiment: Very positive):
+An extensive review of the university’s website and talking to peers has further cemented my decision, and I am confident that studying at UCLA would afford me fabulous opportunities to succeed in the realm of Computer Science.
+[FILENAME=input.txt]
+[Text=An PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=extensive PartOfSpeech=JJ Lemma=extensive SentimentClass=Neutral]
+[Text=review PartOfSpeech=NN Lemma=review SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=university PartOfSpeech=NN Lemma=university SentimentClass=Neutral]
+[Text='s PartOfSpeech=POS Lemma='s SentimentClass=Neutral]
+[Text=website PartOfSpeech=NN Lemma=website SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=talking PartOfSpeech=VBG Lemma=talk SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=peers PartOfSpeech=NNS Lemma=peer SentimentClass=Neutral]
+[Text=has PartOfSpeech=VBZ Lemma=have SentimentClass=Neutral]
+[Text=further PartOfSpeech=RB Lemma=further SentimentClass=Neutral]
+[Text=cemented PartOfSpeech=VBN Lemma=cement SentimentClass=Neutral]
+[Text=my PartOfSpeech=PRP$ Lemma=my SentimentClass=Neutral]
+[Text=decision PartOfSpeech=NN Lemma=decision SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=am PartOfSpeech=VBP Lemma=be SentimentClass=Neutral]
+[Text=confident PartOfSpeech=JJ Lemma=confident SentimentClass=Very positive]
+[Text=that PartOfSpeech=IN Lemma=that SentimentClass=Neutral]
+[Text=studying PartOfSpeech=VBG Lemma=study SentimentClass=Neutral]
+[Text=at PartOfSpeech=IN Lemma=at SentimentClass=Neutral]
+[Text=UCLA PartOfSpeech=NNP Lemma=UCLA SentimentClass=Neutral]
+[Text=would PartOfSpeech=MD Lemma=would SentimentClass=Neutral]
+[Text=afford PartOfSpeech=VB Lemma=afford SentimentClass=Neutral]
+[Text=me PartOfSpeech=PRP Lemma=I SentimentClass=Positive]
+[Text=fabulous PartOfSpeech=JJ Lemma=fabulous SentimentClass=Neutral]
+[Text=opportunities PartOfSpeech=NNS Lemma=opportunity SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=succeed PartOfSpeech=VB Lemma=succeed SentimentClass=Positive]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=realm PartOfSpeech=NN Lemma=realm SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=Computer PartOfSpeech=NNP Lemma=Computer SentimentClass=Neutral]
+[Text=Science PartOfSpeech=NNP Lemma=Science SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, cemented-15)
+det(review-3, An-1)
+amod(review-3, extensive-2)
+nsubj(cemented-15, review-3)
+case(website-8, of-4)
+det(university-6, the-5)
+nmod:poss(website-8, university-6)
+case(university-6, 's-7)
+nmod:of(review-3, website-8)
+cc(website-8, and-9)
+conj:and(website-8, talking-10)
+case(peers-12, to-11)
+nmod:to(talking-10, peers-12)
+aux(cemented-15, has-13)
+advmod(cemented-15, further-14)
+nmod:poss(decision-17, my-16)
+dobj(cemented-15, decision-17)
+punct(cemented-15, ,-18)
+cc(cemented-15, and-19)
+nsubj(confident-22, I-20)
+cop(confident-22, am-21)
+conj:and(cemented-15, confident-22)
+mark(afford-28, that-23)
+csubj(afford-28, studying-24)
+case(UCLA-26, at-25)
+nmod:at(studying-24, UCLA-26)
+aux(afford-28, would-27)
+ccomp(confident-22, afford-28)
+nsubj(opportunities-31, me-29)
+amod(opportunities-31, fabulous-30)
+xcomp(afford-28, opportunities-31)
+mark(succeed-33, to-32)
+acl(opportunities-31, succeed-33)
+case(realm-36, in-34)
+det(realm-36, the-35)
+nmod:in(succeed-33, realm-36)
+case(Science-39, of-37)
+compound(Science-39, Computer-38)
+nmod:of(realm-36, Science-39)
+punct(cemented-15, .-40)
+
+Sentence #42 (32 tokens, sentiment: Negative):
+I plan on adding to the diversity of the institution not only through scholastic excellence, but also through contributions in research and co-curricular activities and build a mutually rewarding association.
+[FILENAME=input.txt]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=plan PartOfSpeech=VBP Lemma=plan SentimentClass=Neutral]
+[Text=on PartOfSpeech=IN Lemma=on SentimentClass=Neutral]
+[Text=adding PartOfSpeech=VBG Lemma=add SentimentClass=Positive]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=diversity PartOfSpeech=NN Lemma=diversity SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=institution PartOfSpeech=NN Lemma=institution SentimentClass=Neutral]
+[Text=not PartOfSpeech=RB Lemma=not SentimentClass=Negative]
+[Text=only PartOfSpeech=RB Lemma=only SentimentClass=Neutral]
+[Text=through PartOfSpeech=IN Lemma=through SentimentClass=Neutral]
+[Text=scholastic PartOfSpeech=JJ Lemma=scholastic SentimentClass=Neutral]
+[Text=excellence PartOfSpeech=NN Lemma=excellence SentimentClass=Negative]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=but PartOfSpeech=CC Lemma=but SentimentClass=Neutral]
+[Text=also PartOfSpeech=RB Lemma=also SentimentClass=Neutral]
+[Text=through PartOfSpeech=IN Lemma=through SentimentClass=Neutral]
+[Text=contributions PartOfSpeech=NNS Lemma=contribution SentimentClass=Negative]
+[Text=in PartOfSpeech=IN Lemma=in SentimentClass=Neutral]
+[Text=research PartOfSpeech=NN Lemma=research SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=co-curricular PartOfSpeech=JJ Lemma=co-curricular SentimentClass=Neutral]
+[Text=activities PartOfSpeech=NNS Lemma=activity SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=build PartOfSpeech=VB Lemma=build SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=mutually PartOfSpeech=RB Lemma=mutually SentimentClass=Neutral]
+[Text=rewarding PartOfSpeech=JJ Lemma=rewarding SentimentClass=Positive]
+[Text=association PartOfSpeech=NN Lemma=association SentimentClass=Neutral]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, plan-2)
+nsubj(plan-2, I-1)
+mark(adding-4, on-3)
+advcl(plan-2, adding-4)
+conj:and(adding-4, adding-4')
+case(diversity-7, to-5)
+det(diversity-7, the-6)
+nmod:to(adding-4, diversity-7)
+case(institution-10, of-8)
+det(institution-10, the-9)
+nmod:of(diversity-7, institution-10)
+neg(only-12, not-11)
+cc:preconj(excellence-15, only-12)
+case(excellence-15, through-13)
+amod(excellence-15, scholastic-14)
+nmod:through(adding-4, excellence-15)
+punct(excellence-15, ,-16)
+cc(adding-4, but-17)
+advmod(contributions-20, also-18)
+case(contributions-20, through-19)
+nmod:through(adding-4', contributions-20)
+case(activities-25, in-21)
+compound(activities-25, research-22)
+cc(research-22, and-23)
+conj:and(research-22, co-curricular-24)
+nmod:in(contributions-20, activities-25)
+cc(plan-2, and-26)
+conj:and(plan-2, build-27)
+det(association-31, a-28)
+advmod(rewarding-30, mutually-29)
+amod(association-31, rewarding-30)
+dobj(build-27, association-31)
+punct(plan-2, .-32)
+
+Sentence #43 (29 tokens, sentiment: Positive):
+I hope the admission committee deems me an appropriate candidate for the course, and I look forward to being a part of the Fall 2016 incoming batch.
+[FILENAME=input.txt]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=hope PartOfSpeech=VBP Lemma=hope SentimentClass=Very positive]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=admission PartOfSpeech=NN Lemma=admission SentimentClass=Neutral]
+[Text=committee PartOfSpeech=NN Lemma=committee SentimentClass=Neutral]
+[Text=deems PartOfSpeech=VBZ Lemma=deem SentimentClass=Neutral]
+[Text=me PartOfSpeech=PRP Lemma=I SentimentClass=Positive]
+[Text=an PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=appropriate PartOfSpeech=JJ Lemma=appropriate SentimentClass=Positive]
+[Text=candidate PartOfSpeech=NN Lemma=candidate SentimentClass=Neutral]
+[Text=for PartOfSpeech=IN Lemma=for SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=course PartOfSpeech=NN Lemma=course SentimentClass=Neutral]
+[Text=, PartOfSpeech=, Lemma=, SentimentClass=Neutral]
+[Text=and PartOfSpeech=CC Lemma=and SentimentClass=Neutral]
+[Text=I PartOfSpeech=PRP Lemma=I SentimentClass=Neutral]
+[Text=look PartOfSpeech=VBP Lemma=look SentimentClass=Neutral]
+[Text=forward PartOfSpeech=RB Lemma=forward SentimentClass=Neutral]
+[Text=to PartOfSpeech=TO Lemma=to SentimentClass=Neutral]
+[Text=being PartOfSpeech=VBG Lemma=be SentimentClass=Neutral]
+[Text=a PartOfSpeech=DT Lemma=a SentimentClass=Neutral]
+[Text=part PartOfSpeech=NN Lemma=part SentimentClass=Neutral]
+[Text=of PartOfSpeech=IN Lemma=of SentimentClass=Neutral]
+[Text=the PartOfSpeech=DT Lemma=the SentimentClass=Neutral]
+[Text=Fall PartOfSpeech=NN Lemma=fall SentimentClass=Neutral]
+[Text=2016 PartOfSpeech=CD Lemma=2016 SentimentClass=Neutral]
+[Text=incoming PartOfSpeech=JJ Lemma=incoming SentimentClass=Neutral]
+[Text=batch PartOfSpeech=NN Lemma=batch SentimentClass=Positive]
+[Text=. PartOfSpeech=. Lemma=. SentimentClass=Neutral]
+
+root(ROOT-0, hope-2)
+nsubj(hope-2, I-1)
+det(committee-5, the-3)
+compound(committee-5, admission-4)
+nsubj(deems-6, committee-5)
+ccomp(hope-2, deems-6)
+nsubj(candidate-10, me-7)
+det(candidate-10, an-8)
+amod(candidate-10, appropriate-9)
+xcomp(deems-6, candidate-10)
+case(course-13, for-11)
+det(course-13, the-12)
+nmod:for(candidate-10, course-13)
+punct(hope-2, ,-14)
+cc(hope-2, and-15)
+nsubj(look-17, I-16)
+conj:and(hope-2, look-17)
+advmod(look-17, forward-18)
+mark(part-22, to-19)
+cop(part-22, being-20)
+det(part-22, a-21)
+advcl(look-17, part-22)
+case(Fall-25, of-23)
+det(Fall-25, the-24)
+nmod:of(part-22, Fall-25)
+nummod(batch-28, 2016-26)
+amod(batch-28, incoming-27)
+dep(Fall-25, batch-28)
+punct(hope-2, .-29)
+
+
+

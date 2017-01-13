@@ -1,0 +1,41 @@
+
+> db.testing.find({ "SentenceSentiment" : "Negative" }).count()
+334
+> db.testing.aggregate([{$group : {_id : "$SentenceSentiment", sum : {$sum : 1}}}])
+{ "_id" : "Very negative", "sum" : 12 }
+{ "_id" : "Very positive", "sum" : 5 }
+{ "_id" : "Neutral", "sum" : 78 }
+{ "_id" : "Positive", "sum" : 105 }
+{ "_id" : "Negative", "sum" : 334 }
+> db.testing.aggregate([{$group : {_id : "$SentenceSentiment", sum : {$sum : 1}}
+}])
+{ "_id" : "Very negative", "sum" : 12 }
+{ "_id" : "Very positive", "sum" : 5 }
+{ "_id" : "Neutral", "sum" : 78 }
+{ "_id" : "Positive", "sum" : 105 }
+{ "_id" : "Negative", "sum" : 334 }
+>
+
+db.testing.aggregate([{$group : {_id : "$pos.pos", sum : {$sum : 1}}}])
+
+Type "it" for more
+> db.testing.find({"pos.lemma":{"the","of"}}).pretty()
+2016-04-04T18:39:51.552+0530 SyntaxError: Unexpected token ,
+> db.testing.find({"pos.lemma":{'the','of'}}).pretty()
+2016-04-04T18:40:14.864+0530 SyntaxError: Unexpected token ,
+> db.testing.find({"pos.lemma":['the','of']}).pretty()
+> db.testing.find({"pos.lemma":['the','of']}).pretty()
+> db.testing.find({"pos.lemma":['the','of']}).pretty()
+
+
+
+Type "it" for more
+> db.testing.find({"pos.lemma":"the"}).pretty()
+
+> db.testing.find({"pos":{$elemMatch:{lemma:"India"}}}).
+37
+>
+
+db.testing.find({"pos":{$elemMatch:{lemma:"India"}}}).find({"pos":{$elemMatch:{lemma:"cricket"}}})
+
+db.testing.find({"pos":{$elemMatch:{lemma:"India",lemma:"

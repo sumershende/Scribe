@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm -->
+<html class=" js no-touch csstransforms3d csstransitions" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+<meta charset="utf-8">
+<title>MongoDB - Quick Guide</title>
+<meta name="description" content="MongoDB Quick Guide - Learn MongoDB in simple and easy steps using this beginner&#39;s tutorial containing basic to advanced knowledge starting from  what is mongoD?, why and where you should use it?, Environment Setup, creating collection, document.">
+<meta name="keywords" content="Mongodb, overview, Advantages, Environment, Data Modelling, Create Database, Drop Database, Create Collection, Drop Collection, Data Types, Insert Document, Query Document, Update Document, Delete Document, Projection, Limiting Records, Sorting, Records, Indexing, Aggregration, Replication, Sharding, Create Backup, Deployment, Java, Relationships, Database References, Covered Queries, Analyzing Queries, Atomic Operations, Advanced Indexing, Indexing Limitations, ObjectId, Map Reduce, Text Search, Regular Expression, Rockmongo, GridFS, Capped Collections, Auto-Increment Sequence.">
+<!--<base href="http://www.tutorialspoint.com/">--><base href=".">
+<link rel="shortcut icon" href="http://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="471319149685276">
+<meta property="og:site_name" content="www.tutorialspoint.com">
+<meta name="robots" content="index, follow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script src="./MongoDB - Quick Guide_files/ca-pub-7133395778201029.js"></script><script type="text/javascript" src="./MongoDB - Quick Guide_files/script-min-v4.js"></script>
+<link rel="stylesheet" href="./MongoDB - Quick Guide_files/style-min.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #459e36 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #459e36 !important;}
+.submenu-item{ border-bottom: 2px solid #459e36 !important; border-top: 2px solid #459e36 !important }
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()" class="sticky-menu-active" style="padding-top: 111px;">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="./MongoDB - Quick Guide_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo logo-sticky-active">
+      <a href="http://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="./MongoDB - Quick Guide_files/logo.png" style="height: 40px; width: 137px; display: inline-block; top: 28px;">
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" class="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com">
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == &#39;Search your tutorials...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search your tutorials...&#39;;}">
+               <input value="FORID:11" name="cof" type="hidden">
+               <input type="hidden" name="ie" value="ISO-8859-1">
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li> <a href="http://www.tutorialspoint.com/shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-question"></i> &nbsp;Quizzes</a> </li>
+            <li class="top-icons" style="display:none;">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 1990px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="http://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library  <i class="fa-caret-down"></i></span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.send18.com/" target="_blank"><i class="fa fa-send"></i>  Send18</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/online_file_conversion.htm"><i class="icon icon-refresh"></i>  Conversion</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/online_dev_tools.htm"><span class="dev-tools-menu">  Dev Tools</span></a></li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="./MongoDB - Quick Guide_files/mongodb-mini-logo.jpg" alt="MongoDB Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">MongoDB Tutorial</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/index.htm">MongoDB - Home</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_overview.htm">MongoDB - Overview</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_advantages.htm">MongoDB - Advantages</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_environment.htm">MongoDB - Environment</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_data_modeling.htm">MongoDB - Data Modeling</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_create_database.htm">MongoDB - Create Database</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_drop_database.htm">MongoDB - Drop Database</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_create_collection.htm">MongoDB - Create Collection</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_drop_collection.htm">MongoDB - Drop Collection</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_datatype.htm">MongoDB - Data Types</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_insert_document.htm">MongoDB - Insert Document</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_query_document.htm">MongoDB - Query Document</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_update_document.htm">MongoDB - Update Document</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_delete_document.htm">MongoDB - Delete Document</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_projection.htm">MongoDB - Projection</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_limit_record.htm">MongoDB - Limiting Records</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_sort_record.htm">MongoDB - Sorting Records</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_indexing.htm">MongoDB - Indexing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_aggregation.htm">MongoDB - Aggregation</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_replication.htm">MongoDB - Replication</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_sharding.htm">MongoDB - Sharding</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_create_backup.htm">MongoDB - Create Backup</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_deployment.htm">MongoDB - Deployment</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_java.htm">MongoDB - Java</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_php.htm">MongoDB - PHP</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Advanced MongoDB</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_relationships.htm">MongoDB Relationships</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_database_references.htm">MongoDB Database References</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_covered_queries.htm">MongoDB Covered Queries</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_analyzing_queries.htm">MongoDB Analyzing Queries</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_atomic_operations.htm">MongoDB Atomic Operations</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_advanced_indexing.htm">MongoDB Advanced Indexing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_indexing_limitations.htm">MongoDB Indexing Limitations</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_objectid.htm">MongoDB ObjectId</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_map_reduce.htm">MongoDB Map Reduce</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_text_search.htm">MongoDB Text Search</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_regular_expression.htm">MongoDB Regular Expression</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/working_with_rockmongo.htm">Working with Rockmongo</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_gridfs.htm">MongoDB GridFS</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_capped_collections.htm">MongoDB Capped Collections</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_autoincrement_sequence.htm">MongoDB Auto-Increment Sequence</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">MongoDB Useful Resources</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_questions_answers.htm">MongoDB - Questions and Answers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm" style="background-color: rgb(214, 214, 214);">MongoDB - Quick Guide</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_useful_resources.htm">MongoDB - Useful Resources</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/mongodb/mongodb_discussion.htm">MongoDB - Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+ </aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>MongoDB - Quick Guide</h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="./MongoDB - Quick Guide_files/show_ads.js"> 
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><iframe width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/mongodb/mongodb_autoincrement_sequence.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/mongodb/mongodb_useful_resources.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<h1>MongoDB Overview</h1>
+<p>MongoDB is a cross-platform, document oriented database that provides, high performance, high availability, and easy scalability. MongoDB works on concept of collection and document.</p>
+<h2>Database</h2>
+<p>Database is a physical container for collections. Each database gets its own set of files on the file system. A single MongoDB server typically has multiple databases.</p>
+<h2>Collection</h2>
+<p>Collection is a group of MongoDB documents. It is the equivalent of an RDBMS table. A collection exists within a single database. Collections do not enforce a schema. Documents within a collection can have different fields. Typically, all documents in a collection are of similar or related purpose.</p>
+<h2>Document</h2>
+<p>A document is a set of key-value pairs. Documents have dynamic schema. Dynamic schema means that documents in the same collection do not need to have the same set of fields or structure, and common fields in a collection's documents may hold different types of data.</p>
+<h2>Sample document</h2>
+<p>Below given example shows the document structure of a blog site which is simply a comma separated key value pair.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">{</span><span class="pln">
+   _id</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902c</span><span class="pun">)</span><span class="pln">
+   title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MongoDB Overview'</span><span class="pun">,</span><span class="pln"> 
+   description</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MongoDB is no sql database'</span><span class="pun">,</span><span class="pln">
+   </span><span class="kwd">by</span><span class="pun">:</span><span class="pln"> </span><span class="str">'tutorials point'</span><span class="pun">,</span><span class="pln">
+   url</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://www.tutorialspoint.com'</span><span class="pun">,</span><span class="pln">
+   tags</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'mongodb'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'NoSQL'</span><span class="pun">],</span><span class="pln">
+   likes</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pun">,</span><span class="pln"> 
+   comments</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">	
+      </span><span class="pun">{</span><span class="pln">
+         user</span><span class="pun">:</span><span class="str">'user1'</span><span class="pun">,</span><span class="pln">
+         message</span><span class="pun">:</span><span class="pln"> </span><span class="str">'My first comment'</span><span class="pun">,</span><span class="pln">
+         dateCreated</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">(</span><span class="lit">2011</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">20</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">15</span><span class="pun">),</span><span class="pln">
+         like</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> 
+      </span><span class="pun">},</span><span class="pln">
+      </span><span class="pun">{</span><span class="pln">
+         user</span><span class="pun">:</span><span class="str">'user2'</span><span class="pun">,</span><span class="pln">
+         message</span><span class="pun">:</span><span class="pln"> </span><span class="str">'My second comments'</span><span class="pun">,</span><span class="pln">
+         dateCreated</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">(</span><span class="lit">2011</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">25</span><span class="pun">,</span><span class="lit">7</span><span class="pun">,</span><span class="lit">45</span><span class="pun">),</span><span class="pln">
+         like</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+   </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h1>Install MongoDB On Windows</h1>
+<p>To install the MongoDB on windows, first doownload the latest  release of MongoDB from <a target="_blank" rel="nofollow" href="http://www.mongodb.org/downloads">http://www.mongodb.org/downloads</a>
+</p><p>Now extract your downloaded file to c:\ drive or any other location. Make sure name of the extracted folder is mongodb-win32-i386-[version] or mongodb-win32-x86_64-[version]. Here [version] is the version of MongoDB download.</p>
+<p>Now open command prompt and run the following command</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">C</span><span class="pun">:</span><span class="pln">\&gt;move mongodb</span><span class="pun">-</span><span class="pln">win64</span><span class="pun">-*</span><span class="pln"> mongodb
+      </span><span class="lit">1</span><span class="pln"> dir</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln"> moved</span><span class="pun">.</span><span class="pln">
+C</span><span class="pun">:</span><span class="pln">\&gt;</span></pre>
+<p>In case you have extracted the mondodb at different location, then go to that path by using command <b>cd FOOLDER/DIR</b> and now run the above given process.</p>
+<p>MongoDB requires a data folder to store its files. The default location for the MongoDB data directory is c:\data\db. So you need to create this folder using the Command Prompt. Execute the following command sequence</p> 
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">C</span><span class="pun">:</span><span class="pln">\&gt;md data
+C</span><span class="pun">:</span><span class="pln">\md data\db</span></pre>
+<p>If you have install the MongoDB at different location, then you need to specify any alternate path for <b>\data\db</b> by setting the path dbpath in mongod.exe. For the same issue following commands</p>
+<p>In command prompt navigate to the bin directory present into the mongodb installation folder. Suppose my installation folder is <b>D:\set up\mongodb</b></p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln"> 
+C</span><span class="pun">:</span><span class="pln">\Users\XYZ</span><span class="pun">&gt;</span><span class="pln">d</span><span class="pun">:</span><span class="pln">
+D</span><span class="pun">:</span><span class="pln">\&gt;cd </span><span class="str">"set up"</span><span class="pln">
+D</span><span class="pun">:</span><span class="pln">\set up</span><span class="pun">&gt;</span><span class="pln">cd mongodb
+D</span><span class="pun">:</span><span class="pln">\set up\mongodb</span><span class="pun">&gt;</span><span class="pln">cd bin
+D</span><span class="pun">:</span><span class="pln">\set up\mongodb\b</span><span class="kwd">in</span><span class="pun">&gt;</span><span class="pln">mongod</span><span class="pun">.</span><span class="pln">exe </span><span class="pun">--</span><span class="pln">dbpath </span><span class="str">"d:\set up\mongodb\data"</span><span class="pln"> </span></pre>
+<p>This will show <b>waiting for connections</b> message on the console output indicates that the mongod.exe process is running successfully.</p>
+<p>Now to run the mongodb you need to open another command prompt and issue the following command</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln"> 
+D</span><span class="pun">:</span><span class="pln">\set up\mongodb\b</span><span class="kwd">in</span><span class="pun">&gt;</span><span class="pln">mongo</span><span class="pun">.</span><span class="pln">exe
+</span><span class="typ">MongoDB</span><span class="pln"> shell version</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2.4</span><span class="pun">.</span><span class="lit">6</span><span class="pln">
+connecting to</span><span class="pun">:</span><span class="pln"> test
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">test</span><span class="pun">.</span><span class="pln">save</span><span class="pun">(</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> a</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">test</span><span class="pun">.</span><span class="pln">find</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5879b0f65a56a454</span><span class="pun">),</span><span class="pln"> </span><span class="str">"a"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>This will show that mongodb is installed and run successfully. Next time when you run mongodb you need to issue only commands</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln"> 
+D</span><span class="pun">:</span><span class="pln">\set up\mongodb\b</span><span class="kwd">in</span><span class="pun">&gt;</span><span class="pln">mongod</span><span class="pun">.</span><span class="pln">exe </span><span class="pun">--</span><span class="pln">dbpath </span><span class="str">"d:\set up\mongodb\data"</span><span class="pln"> 
+D</span><span class="pun">:</span><span class="pln">\set up\mongodb\b</span><span class="kwd">in</span><span class="pun">&gt;</span><span class="pln">mongo</span><span class="pun">.</span><span class="pln">exe</span></pre>
+<h1>Create Database</h1>
+<p>MongoDB <b>use DATABASE_NAME</b> is used to create database. The command will create a new database, if it doesn't exist otherwise it will return the existing database.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>use DATABASE</b> statement is as follows:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">use</span><span class="pln"> DATABASE_NAME</span></pre>
+<h2>Example:</h2>
+<p>If you want to create a database with name <b>&lt;mydb&gt;</b>, then <b>use DATABASE</b> statement would be as follows:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="kwd">use</span><span class="pln"> mydb
+switched to db mydb</span></pre>
+<p>To check your currently selected database use the command <b>db</b></p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db
+mydb</span></pre>
+<p>If you want to check your databases list, then use the command <b>show dbs</b>.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">show dbs
+</span><span class="kwd">local</span><span class="pln">     </span><span class="lit">0.78125GB</span><span class="pln">
+test      </span><span class="lit">0.23012GB</span></pre>
+<p>Your created database (mydb) is not present in list. To display database you need to insert atleast one document into it.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">movie</span><span class="pun">.</span><span class="pln">insert</span><span class="pun">({</span><span class="str">"name"</span><span class="pun">:</span><span class="str">"tutorials point"</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln">show dbs
+</span><span class="kwd">local</span><span class="pln">      </span><span class="lit">0.78125GB</span><span class="pln">
+mydb       </span><span class="lit">0.23012GB</span><span class="pln">
+test       </span><span class="lit">0.23012GB</span></pre>
+<p>In mongodb default database is test. If you didn't create any database then collections will be stored in test database.</p>
+<h1>Drop Database</h1>
+<p>MongoDB <b>db.dropDatabase()</b> command is used to drop a existing database.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>dropDatabase()</b> command is as follows:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">db</span><span class="pun">.</span><span class="pln">dropDatabase</span><span class="pun">()</span></pre>
+<p>This will delete the selected database. If you have not selected any database, then it will delete default 'test' database</p>
+<h2>Example:</h2>
+<p>If you want to delete new database <b>&lt;mydb&gt;</b>, then <b>dropDatabase()</b> command would be as follows:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="kwd">use</span><span class="pln"> mydb
+switched to db mydb
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">dropDatabase</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">&gt;{</span><span class="pln"> </span><span class="str">"dropped"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"mydb"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"ok"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<h1>Create Collection</h1>
+<p>MongoDB <b>db.createCollection(name, options)</b> is used to create collection. In the command, <b>name</b> is name of collection to be created. <b>Options</b> is a document and used to specify configuration of collection</p>
+<table class="table table-bordered">
+<tbody><tr><th style="width:25%;">Parameter</th><th style="width:25%;">Type</th><th>Description</th></tr>
+<tr><td>Name</td><td>String</td><td>Name of the collection to be created</td></tr>
+<tr><td>Options</td><td>Document</td><td>(Optional) Specify options about memory size and indexing</td></tr>
+</tbody></table>
+<p>Options parameter is optional, so you need to specify only name of the collection.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>createCollection()</b> method is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="kwd">use</span><span class="pln"> test
+switched to db test
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">createCollection</span><span class="pun">(</span><span class="str">"mycollection"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"ok"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>You can check the created collection by using the command <b>show collections</b></p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">show collections
+mycollection
+system</span><span class="pun">.</span><span class="pln">indexes</span></pre>
+<h2>List of options</h2>
+<table class="table table-bordered">
+<tbody><tr><th style="width:15%;">Field</th><th style="width:15%;">Type</th><th>Description</th></tr>
+<tr><td>capped</td><td>Boolean</td><td>(Optional) If true, enables a capped collection. Capped collection is a collection fixed size collecction that automatically overwrites its oldest entries when it reaches its maximum size. <b>If you specify true, you need to specify size parameter also.</b></td></tr>
+<tr><td>autoIndexID</td><td>Boolean</td><td>(Optional) If true, automatically create index on _id field.s Default value is false.</td></tr>
+<tr><td>size</td><td>number</td><td>(Optional) Specifies a maximum size in bytes for a capped collection. If <b>If capped is true, then you need to specify this field also.</b></td></tr>
+<tr><td>max</td><td>number</td><td>(Optional) Specifies the maximum number of documents allowed in the capped collection.</td></tr>
+</tbody></table>
+<p>While inserting the document, MongoDB first checks size field of capped collection, then it checks max field.</p>
+<h2>Syntax : </h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">createCollection</span><span class="pun">(</span><span class="str">"mycol"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> capped </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> autoIndexID </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> size </span><span class="pun">:</span><span class="pln"> </span><span class="lit">6142800</span><span class="pun">,</span><span class="pln"> max </span><span class="pun">:</span><span class="pln"> </span><span class="lit">10000</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"ok"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>In mongodb you don't need to create collection. MongoDB creates collection automatically, when you insert some document.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">tutorialspoint</span><span class="pun">.</span><span class="pln">insert</span><span class="pun">({</span><span class="str">"name"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"tutorialspoint"</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln">show collections
+mycol
+mycollection
+system</span><span class="pun">.</span><span class="pln">indexes
+tutorialspoint
+</span><span class="pun">&gt;</span></pre>
+<h1>Drop Collection</h1>
+<p>MongoDB's <b>db.collection.drop()</b> is used to drop a collection from the database.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>drop()</b> command is as follows </p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">drop</span><span class="pun">()</span></pre>
+<h2>Example:</h2>
+<p>Below given example will drop the collection with the name <b>mycollection</b></p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="kwd">use</span><span class="pln"> mydb
+switched to db mydb
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycollection</span><span class="pun">.</span><span class="pln">drop</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<h1>Insert Document</h1>
+<p>To insert data into MongoDB collection, you need to use MongoDB's <b>insert()</b> method.</p>
+<h2>Syntax</h2>
+<p>Basic syntax of <b>insert()</b> command is as follows:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">insert</span><span class="pun">(</span><span class="pln">document</span><span class="pun">)</span></pre>
+<h2>Example</h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">insert</span><span class="pun">({</span><span class="pln">
+   _id</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902c</span><span class="pun">),</span><span class="pln">
+   title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MongoDB Overview'</span><span class="pun">,</span><span class="pln"> 
+   description</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MongoDB is no sql database'</span><span class="pun">,</span><span class="pln">
+   </span><span class="kwd">by</span><span class="pun">:</span><span class="pln"> </span><span class="str">'tutorials point'</span><span class="pun">,</span><span class="pln">
+   url</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://www.tutorialspoint.com'</span><span class="pun">,</span><span class="pln">
+   tags</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'mongodb'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'NoSQL'</span><span class="pun">],</span><span class="pln">
+   likes</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pln">
+</span><span class="pun">})</span></pre>
+<p>Here <b>mycol</b> is our collection name, as created in previous tutorial. If the collection doesn't exist in the database, then MongoDB will create this collection and then insert document into it.</p>
+<p>In the inserted document if we don't specify the _id parameter, then MongoDB assigns an unique ObjectId for this document.</p>
+<p>_id is 12 bytes hexadecimal number unique for every document in a collection. 12 bytes are divided as follows: </p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">_id</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">4</span><span class="pln"> bytes timestamp</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pln"> bytes machine id</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pln"> bytes process id</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pln"> bytes incrementer</span><span class="pun">)</span></pre>
+<p>To insert multiple documents in single query, you can pass an array of documents in insert() command.</p>
+<h2>Example</h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">post</span><span class="pun">.</span><span class="pln">insert</span><span class="pun">([</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MongoDB Overview'</span><span class="pun">,</span><span class="pln"> 
+   description</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MongoDB is no sql database'</span><span class="pun">,</span><span class="pln">
+   </span><span class="kwd">by</span><span class="pun">:</span><span class="pln"> </span><span class="str">'tutorials point'</span><span class="pun">,</span><span class="pln">
+   url</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://www.tutorialspoint.com'</span><span class="pun">,</span><span class="pln">
+   tags</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'mongodb'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'NoSQL'</span><span class="pun">],</span><span class="pln">
+   likes</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pln">
+</span><span class="pun">},</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'NoSQL Database'</span><span class="pun">,</span><span class="pln"> 
+   description</span><span class="pun">:</span><span class="pln"> </span><span class="str">'NoSQL database doesn'</span><span class="pln">t have tables</span><span class="str">',
+   by: '</span><span class="pln">tutorials point</span><span class="str">',
+   url: '</span><span class="pln">http</span><span class="pun">:</span><span class="com">//www.tutorialspoint.com',</span><span class="pln">
+   tags</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'mongodb'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'NoSQL'</span><span class="pun">],</span><span class="pln">
+   likes</span><span class="pun">:</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> 
+   comments</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">	
+      </span><span class="pun">{</span><span class="pln">
+         user</span><span class="pun">:</span><span class="str">'user1'</span><span class="pun">,</span><span class="pln">
+         message</span><span class="pun">:</span><span class="pln"> </span><span class="str">'My first comment'</span><span class="pun">,</span><span class="pln">
+         dateCreated</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">(</span><span class="lit">2013</span><span class="pun">,</span><span class="lit">11</span><span class="pun">,</span><span class="lit">10</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">35</span><span class="pun">),</span><span class="pln">
+         like</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> 
+      </span><span class="pun">}</span><span class="pln">
+   </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">])</span></pre>
+<h1>Query Document</h1>
+<p>To query data from MongoDB collection, you need to use MongoDB's <b>find()</b> method.</p>
+<h2>Syntax</h2>
+<p>Basic syntax of <b>find()</b> method is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">find</span><span class="pun">()</span></pre>
+<p><b>find() </b>method will display all the documents in a non structured way. To display the results in a formatted way, you can use <b>pretty()</b> method.</p>
+<h2>Syntax:</h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">().</span><span class="pln">pretty</span><span class="pun">()</span></pre>
+<h2>Example</h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">().</span><span class="pln">pretty</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="str">"_id"</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902c</span><span class="pun">),</span><span class="pln">
+   </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB Overview"</span><span class="pun">,</span><span class="pln"> 
+   </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB is no sql database"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"by"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"tutorials point"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"http://www.tutorialspoint.com"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"tags"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">"mongodb"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"database"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"NoSQL"</span><span class="pun">],</span><span class="pln">
+   </span><span class="str">"likes"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100"</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>Apart from find() method there is <b>findOne()</b> method, that reruns only one document.</p>
+<h2>RDBMS Where Clause Equivalents in MongoDB</h2>
+<p>To query the document on the basis of some condition, you can use following operations</p>
+<table class="table table-bordered">
+<tbody><tr><th style="width:18%;">Operation</th><th style="width:22%;">Syntax</th><th style="width:40%;">Example</th><th>RDBMS Equivalent</th></tr>
+<tr><td>Equality</td><td>{&lt;key&gt;:&lt;value&gt;}</td><td>db.mycol.find({"by":"tutorials point"}).pretty()</td><td>where by = 'tutorials point'</td></tr>
+<tr><td>Less Than</td><td>{&lt;key&gt;:{$lt:&lt;value&gt;}}</td><td>db.mycol.find({"likes":{$lt:50}}).pretty()</td><td>where likes &lt; 50</td></tr>
+<tr><td>Less Than Equals</td><td>{&lt;key&gt;:{$lte:&lt;value&gt;}}</td><td>db.mycol.find({"likes":{$lte:50}}).pretty()</td><td>where likes &lt;= 50</td></tr>
+<tr><td>Greater Than</td><td>{&lt;key&gt;:{$gt:&lt;value&gt;}}</td><td>db.mycol.find({"likes":{$gt:50}}).pretty()</td><td>where likes &gt; 50</td></tr>
+<tr><td>Greater Than Equals</td><td>{&lt;key&gt;:{$gte:&lt;value&gt;}}</td><td>db.mycol.find({"likes":{$gte:50}}).pretty()</td><td>where likes &gt;= 50</td></tr>
+<tr><td>Not Equals</td><td>{&lt;key&gt;:{$ne:&lt;value&gt;}}</td><td>db.mycol.find({"likes":{$ne:50}}).pretty()</td><td>where likes != 50</td></tr>
+</tbody></table>
+<h2>AND in MongoDB</h2>
+<h2>Syntax:</h2>
+<p>In the <b>find()</b> method if you pass multiple keys by separating them by ',' then MongoDB treats it <b>AND</b> condition. Basic syntax of <b>AND</b> is shown below:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">({</span><span class="pln">key1</span><span class="pun">:</span><span class="pln">value1</span><span class="pun">,</span><span class="pln"> key2</span><span class="pun">:</span><span class="pln">value2</span><span class="pun">}).</span><span class="pln">pretty</span><span class="pun">()</span></pre>
+<h2>Example</h2>
+<p>Below given example will show all the tutorials written  by 'tutorials point' and whose title is 'MongoDB Overview'</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">({</span><span class="str">"by"</span><span class="pun">:</span><span class="str">"tutorials point"</span><span class="pun">,</span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB Overview"</span><span class="pun">}).</span><span class="pln">pretty</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="str">"_id"</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902c</span><span class="pun">),</span><span class="pln">
+   </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB Overview"</span><span class="pun">,</span><span class="pln"> 
+   </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB is no sql database"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"by"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"tutorials point"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"http://www.tutorialspoint.com"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"tags"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">"mongodb"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"database"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"NoSQL"</span><span class="pun">],</span><span class="pln">
+   </span><span class="str">"likes"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100"</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>For the above given example equivalent where clause will be <b>' where by='tutorials point' AND title='MongoDB Overview' '</b>. You can pass any number of key, value pairs in find clause.</p>
+<h2>OR in MongoDB</h2>
+<h2>Syntax:</h2>
+<p>To query documents based on the OR condition, you need to use <b>$or</b> keyword. Basic syntax of <b>OR</b> is shown below:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+      $or</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+	     </span><span class="pun">{</span><span class="pln">key1</span><span class="pun">:</span><span class="pln"> value1</span><span class="pun">},</span><span class="pln"> </span><span class="pun">{</span><span class="pln">key2</span><span class="pun">:</span><span class="pln">value2</span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">]</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">).</span><span class="pln">pretty</span><span class="pun">()</span></pre>
+<h2>Example</h2>
+<p>Below given example will show all the tutorials written  by 'tutorials point' or whose title is 'MongoDB Overview'</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">({</span><span class="pln">$or</span><span class="pun">:[{</span><span class="str">"by"</span><span class="pun">:</span><span class="str">"tutorials point"</span><span class="pun">},{</span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB Overview"</span><span class="pun">}]}).</span><span class="pln">pretty</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="str">"_id"</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902c</span><span class="pun">),</span><span class="pln">
+   </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB Overview"</span><span class="pun">,</span><span class="pln"> 
+   </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB is no sql database"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"by"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"tutorials point"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"http://www.tutorialspoint.com"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"tags"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">"mongodb"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"database"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"NoSQL"</span><span class="pun">],</span><span class="pln">
+   </span><span class="str">"likes"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100"</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<h2>Using AND and OR together</h2>
+<h2>Example</h2>
+<p>Below given example will show the documents that have likes greater than 100 and whose title is either 'MongoDB Overview' or by is 'tutorials point'. Equivalent sql where clause is <b>'where likes&gt;10 AND (by = 'tutorials point' OR title = 'MongoDB Overview')'</b></p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">"likes"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">$gt</span><span class="pun">:</span><span class="lit">10</span><span class="pun">},</span><span class="pln"> $or</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[{</span><span class="str">"by"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"tutorials point"</span><span class="pun">},</span><span class="pln"> </span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB Overview"</span><span class="pun">}]</span><span class="pln"> </span><span class="pun">}).</span><span class="pln">pretty</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="str">"_id"</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902c</span><span class="pun">),</span><span class="pln">
+   </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB Overview"</span><span class="pun">,</span><span class="pln"> 
+   </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"MongoDB is no sql database"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"by"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"tutorials point"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"http://www.tutorialspoint.com"</span><span class="pun">,</span><span class="pln">
+   </span><span class="str">"tags"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">"mongodb"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"database"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"NoSQL"</span><span class="pun">],</span><span class="pln">
+   </span><span class="str">"likes"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100"</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<h1>Update Document</h1>
+<p>MongoDB's <b>update()</b> and <b>save()</b> methods are used to update document into a collection. update() method update values in the existing document while save() method replaces the existing document with the document passed in save() method.</p>
+<h2>MongoDB Update() method</h2>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>update()</b> method is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">update</span><span class="pun">(</span><span class="pln">SELECTIOIN_CRITERIA</span><span class="pun">,</span><span class="pln"> UPDATED_DATA</span><span class="pun">)</span></pre>
+<h2>Example</h2>
+<p>Consider the mycol collectioin has following data.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec5</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"MongoDB Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec6</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span></pre>
+<p>Following example will set the new title 'New MongoDB Tutorial' of the documents whose title is 'MongoDB Overview'</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">update</span><span class="pun">({</span><span class="str">'title'</span><span class="pun">:</span><span class="str">'MongoDB Overview'</span><span class="pun">},{</span><span class="pln">$set</span><span class="pun">:{</span><span class="str">'title'</span><span class="pun">:</span><span class="str">'New MongoDB Tutorial'</span><span class="pun">}})</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec5</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"New MongoDB Tutorial"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec6</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>By default mongodb will update only single document, to update multiple you need to set a paramter 'multi' to true.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">update</span><span class="pun">({</span><span class="str">'title'</span><span class="pun">:</span><span class="str">'MongoDB Overview'</span><span class="pun">},{</span><span class="pln">$set</span><span class="pun">:{</span><span class="str">'title'</span><span class="pun">:</span><span class="str">'New MongoDB Tutorial'</span><span class="pun">}},{</span><span class="pln">multi</span><span class="pun">:</span><span class="kwd">true</span><span class="pun">})</span></pre>
+<h2>MongoDB Save() Method</h2>
+<p><b>save()</b> method replaces the existing document with the new document passed in save() method</p>
+<h2>Syntax</h2>
+<p>Basic syntax of mongodb <b>save()</b> method is shown below:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">save</span><span class="pun">({</span><span class="pln">_id</span><span class="pun">:</span><span class="typ">ObjectId</span><span class="pun">(),</span><span class="pln">NEW_DATA</span><span class="pun">})</span></pre>
+<h2>Example</h2>
+<p>Following example will replace the document with the _id '5983548781331adf45ec7'</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">save</span><span class="pun">(</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point New Topic"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"by"</span><span class="pun">:</span><span class="str">"Tutorials Point"</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec5</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point New Topic"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"by"</span><span class="pun">:</span><span class="str">"Tutorials Point"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec6</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<h1>Delete Document</h1>
+<p>MongoDB's <b>remove()</b> method is used to remove document from the collection. remove() method accepts two parameters. One is deletion criteria and second is justOne flag</p>
+<ol class="list">
+<li><p>deletion criteria : (Optional) deletion criteria according to documents will be removed.</p></li>
+<li><p>justOne : (Optional) if set to true or 1, then remove only one document.</p></li>
+</ol>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>remove()</b> method is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="pln">DELLETION_CRITTERIA</span><span class="pun">)</span></pre>
+<h2>Example</h2>
+<p>Consider the mycol collectioin has following data.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec5</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"MongoDB Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec6</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span></pre>
+<p>Following example will remove all the documents whose title is 'MongoDB Overview'</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">({</span><span class="str">'title'</span><span class="pun">:</span><span class="str">'MongoDB Overview'</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec6</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<h2>Remove only one</h2>
+<p>If there are multiple records and you want to delete only first record, then set <b>justOne</b> parameter in <b>remove()</b> method</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="pln">DELETION_CRITERIA</span><span class="pun">,</span><span class="lit">1</span><span class="pun">)</span></pre>
+<h2>Remove All documents</h2>
+<p>If you don't specify deletion criteria, then mongodb will delete whole documents from the collection. <b>This is equivalent of SQL's truncate command.</b></p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<h1>MongoDB Projection</h1>
+<p>In mongodb projection meaning is selecting only necessary data rather than selecting whole of the data of a document. If a document has 5 fields and you need to show only 3, then select only 3 fields from them.</p>
+<p>MongoDB's <b>find()</b> method, explained in <a href="http://www.tutorialspoint.com/mongodb/mongodb_query_document.htm">MongoDB Query Document</a> accepts second optional parameter that is list of fields that you want to retrieve. In MongoDB when you execute <b>find()</b> method, then it displays all fields of a document. To limit this you need to set list of fields with value 1 or 0. 1 is used to show the filed while 0 is used to hide the field.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>find()</b> method with projection is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">find</span><span class="pun">({},{</span><span class="pln">KEY</span><span class="pun">:</span><span class="lit">1</span><span class="pun">})</span></pre>
+<h2>Example</h2>
+<p>Consider the collection myycol has the following data</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec5</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"MongoDB Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec6</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span></pre>
+<p>Following example will display the title of the document while quering the document.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">({},{</span><span class="str">"title"</span><span class="pun">:</span><span class="lit">1</span><span class="pun">,</span><span class="pln">_id</span><span class="pun">:</span><span class="lit">0</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"MongoDB Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>Please note <b>_id</b> field is always displayed while executing <b>find()</b> method, if you don't want this field, then you need to set it as 0</p>
+<h1>Limit Documents</h1>
+<h2>MongoDB Limit() Method</h2>
+<p>To limit the records in MongoDB, you need to use <b>limit()</b> method. <b>limit()</b> method accepts one number type argument, which is number of documents that you want to displayed.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>limit()</b> method is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">find</span><span class="pun">().</span><span class="pln">limit</span><span class="pun">(</span><span class="pln">NUMBER</span><span class="pun">)</span></pre>
+<h2>Example</h2>
+<p>Consider the collection myycol has the following data</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec5</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"MongoDB Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec6</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span></pre>
+<p>Following example will display only 2 documents while quering the document.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">({},{</span><span class="str">"title"</span><span class="pun">:</span><span class="lit">1</span><span class="pun">,</span><span class="pln">_id</span><span class="pun">:</span><span class="lit">0</span><span class="pun">}).</span><span class="pln">limit</span><span class="pun">(</span><span class="lit">2</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"MongoDB Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>If you don't specify number argument in <b>limit()</b> method then it will display all documents from the collection.</p>
+<h2>MongoDB Skip() Method</h2>
+<p>Apart from limit() method there is one more method <b>skip()</b> which also accepts number type argument and used to skip number of documents.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>skip()</b> method is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">find</span><span class="pun">().</span><span class="pln">limit</span><span class="pun">(</span><span class="pln">NUMBER</span><span class="pun">).</span><span class="pln">skip</span><span class="pun">(</span><span class="pln">NUMBER</span><span class="pun">)</span></pre>
+<h2>Example:</h2>
+<p>Following example will only display only second document.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">({},{</span><span class="str">"title"</span><span class="pun">:</span><span class="lit">1</span><span class="pun">,</span><span class="pln">_id</span><span class="pun">:</span><span class="lit">0</span><span class="pun">}).</span><span class="pln">limit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">).</span><span class="pln">skip</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>Please note default value in <b>skip()</b> method is 0</p>
+<h1>Sorting Documents</h1>
+<p>To sort documents in MongoDB, you need to use <b>sort()</b> method. <b>sort()</b> method accepts a document containing list of fields along with their sorting order. To specify sorting order 1 and -1 are used. 1 is used for ascending order while -1 is used for descending order.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>sort()</b> method is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">find</span><span class="pun">().</span><span class="pln">sort</span><span class="pun">({</span><span class="pln">KEY</span><span class="pun">:</span><span class="lit">1</span><span class="pun">})</span></pre>
+<h2>Example</h2>
+<p>Consider the collection myycol has the following data</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec5</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"MongoDB Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec6</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">5983548781331adf45ec7</span><span class="pun">),</span><span class="pln"> </span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span></pre>
+<p>Following example will display the documents sorted by title in descending order.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">find</span><span class="pun">({},{</span><span class="str">"title"</span><span class="pun">:</span><span class="lit">1</span><span class="pun">,</span><span class="pln">_id</span><span class="pun">:</span><span class="lit">0</span><span class="pun">}).</span><span class="pln">sort</span><span class="pun">({</span><span class="str">"title"</span><span class="pun">:-</span><span class="lit">1</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"Tutorials Point Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"NoSQL Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="str">"title"</span><span class="pun">:</span><span class="str">"MongoDB Overview"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>Please note if you don't specify the sorting preference, then <b>sort()</b> method will display documents in ascending order.</p>
+<h1>MongoDB Indexing</h1>
+<p>Indexes support the efficient resolution of queries. Without indexes, MongoDB must scan every document of a collection to select those documents that match the query statement. This scan is highly inefficient and require the mongod to process a large volume of data.</p>
+<p>Indexes are special data structures, that store a small portion of the data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field as specified in index.</p>
+<p>To create an index you need to use ensureIndex() method of mongodb.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>ensureIndex()</b> method is as follows() </p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">ensureIndex</span><span class="pun">({</span><span class="pln">KEY</span><span class="pun">:</span><span class="lit">1</span><span class="pun">})</span></pre>
+<p>Here key is the name of filed on which you want to create index and 1 is for ascending order. To create index in descending order you need to use -1.</p>
+<h2>Example</h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">ensureIndex</span><span class="pun">({</span><span class="str">"title"</span><span class="pun">:</span><span class="lit">1</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>In <b>ensureIndex()</b> method you can pass multiple fields, to create index on multiple fields.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">ensureIndex</span><span class="pun">({</span><span class="str">"title"</span><span class="pun">:</span><span class="lit">1</span><span class="pun">,</span><span class="str">"description"</span><span class="pun">:-</span><span class="lit">1</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p><b>ensureIndex()</b> method also accepts list of options (which are optional), whose list is given below:</p>
+<table class="table table-bordered">
+<tbody><tr><th style="width:10%;">Parameter</th><th style="width:10%;">Type</th><th>Description</th></tr>
+<tr><td>background</td><td>Boolean</td><td>Builds the index in the background so that building an index does not block other database activities. Specify true to build in the background. The default value is <b>false</b>.</td></tr>
+<tr><td>unique</td><td>Boolean</td><td>Creates a unique index so that the collection will not accept insertion of documents where the index key or keys match an existing value in the index. Specify true to create a unique index. The default value is <b>false</b>.</td></tr>
+<tr><td>name</td><td>string</td><td>The name of the index. If unspecified, MongoDB generates an index name by concatenating the names of the indexed fields and the sort order.</td></tr>
+<tr><td>dropDups</td><td>Boolean</td><td>Creates a unique index on a field that may have duplicates. MongoDB indexes only the first occurrence of a key and removes all documents from the collection that contain subsequent occurrences of that key. Specify true to create unique index. The default value is <b>false</b>.</td></tr>
+<tr><td>sparse</td><td>Boolean</td><td>If true, the index only references documents with the specified field. These indexes use less space but behave differently in some situations (particularly sorts). The default value is <b>false</b>.</td></tr>
+<tr><td>expireAfterSeconds</td><td>integer</td><td>Specifies a value, in seconds, as a TTL to control how long MongoDB retains documents in this collection.</td></tr>
+<tr><td>v</td><td>index version</td><td>The index version number. The default index version depends on the version of mongod running when creating the index.</td></tr>
+<tr><td>weights</td><td>document</td><td>The weight is a number ranging from 1 to 99,999 and denotes the significance of the field relative to the other indexed fields in terms of the score.</td></tr>
+<tr><td>default_language</td><td>string</td><td>For a text index, the language that determines the list of stop words and the rules for the stemmer and tokenizer. The default value is <b>english</b>.</td></tr>
+<tr><td>language_override</td><td>string</td><td>For a text index, specify the name of the field in the document that contains, the language to override the default language. The default value is language.</td></tr>
+</tbody></table>
+<h1>MongoDB Aggregation</h1>
+<p>Aggregations operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. In sql count(*) and with group by is an equivalent of mongodb aggregation. For the aggregation in mongodb you should use <b>aggregate()</b> method.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>aggregate()</b> method is as follows </p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">db</span><span class="pun">.</span><span class="pln">COLLECTION_NAME</span><span class="pun">.</span><span class="pln">aggregate</span><span class="pun">(</span><span class="pln">AGGREGATE_OPERATION</span><span class="pun">)</span></pre>
+<h2>Example:</h2>
+<p>In the collection you have the following data: </p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">{</span><span class="pln">
+   _id</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902c</span><span class="pun">)</span><span class="pln">
+   title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MongoDB Overview'</span><span class="pun">,</span><span class="pln"> 
+   description</span><span class="pun">:</span><span class="pln"> </span><span class="str">'MongoDB is no sql database'</span><span class="pun">,</span><span class="pln">
+   by_user</span><span class="pun">:</span><span class="pln"> </span><span class="str">'tutorials point'</span><span class="pun">,</span><span class="pln">
+   url</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://www.tutorialspoint.com'</span><span class="pun">,</span><span class="pln">
+   tags</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'mongodb'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'NoSQL'</span><span class="pun">],</span><span class="pln">
+   likes</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pln">
+</span><span class="pun">},</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   _id</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902d</span><span class="pun">)</span><span class="pln">
+   title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'NoSQL Overview'</span><span class="pun">,</span><span class="pln"> 
+   description</span><span class="pun">:</span><span class="pln"> </span><span class="str">'No sql database is very fast'</span><span class="pun">,</span><span class="pln">
+   by_user</span><span class="pun">:</span><span class="pln"> </span><span class="str">'tutorials point'</span><span class="pun">,</span><span class="pln">
+   url</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://www.tutorialspoint.com'</span><span class="pun">,</span><span class="pln">
+   tags</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'mongodb'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'NoSQL'</span><span class="pun">],</span><span class="pln">
+   likes</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pln">
+</span><span class="pun">},</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   _id</span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="lit">7df78ad8902e</span><span class="pun">)</span><span class="pln">
+   title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Neo4j Overview'</span><span class="pun">,</span><span class="pln"> 
+   description</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Neo4j is no sql database'</span><span class="pun">,</span><span class="pln">
+   by_user</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Neo4j'</span><span class="pun">,</span><span class="pln">
+   url</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://www.neo4j.com'</span><span class="pun">,</span><span class="pln">
+   tags</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'neo4j'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'NoSQL'</span><span class="pun">],</span><span class="pln">
+   likes</span><span class="pun">:</span><span class="pln"> </span><span class="lit">750</span><span class="pln">
+</span><span class="pun">},</span></pre>
+<p>Now from the above collection if you want to display a list that how many tutorials are written by each user then you will use <b>aggregate()</b> method as shown below:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">mycol</span><span class="pun">.</span><span class="pln">aggregate</span><span class="pun">([{</span><span class="pln">$group </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">_id </span><span class="pun">:</span><span class="pln"> </span><span class="str">"$by_user"</span><span class="pun">,</span><span class="pln"> num_tutorial </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">$sum </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">}}}])</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="str">"result"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+      </span><span class="pun">{</span><span class="pln">
+         </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"tutorials point"</span><span class="pun">,</span><span class="pln">
+         </span><span class="str">"num_tutorial"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pln">
+      </span><span class="pun">},</span><span class="pln">
+      </span><span class="pun">{</span><span class="pln">
+         </span><span class="str">"_id"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"tutorials point"</span><span class="pun">,</span><span class="pln">
+         </span><span class="str">"num_tutorial"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+   </span><span class="pun">],</span><span class="pln">
+   </span><span class="str">"ok"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">&gt;</span></pre>
+<p>Sql equivalent query for the above use case will be <b>select by_user, count(*) from mycol group by by_user</b></p>
+<p>In the above example we have grouped documents by field <b>by_user</b> and on each occurance of by_user previous value of sum is incremented. There is a list available aggregation expressions.</p>
+<table class="table table-bordered">
+<tbody><tr><th style="width:10%;">Expression</th><th style="width:50%">Description</th><th>Example</th></tr>
+<tr><td>$sum</td><td>Sums up the defined value from all documents in the collection.</td><td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}])</td></tr>
+<tr><td>$avg</td><td>Calculates the average of all given values from all documents in the collection.</td><td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$avg : "$likes"}}}])</td></tr>
+<tr><td>$min</td><td>Gets the minimum of the corresponding values from all documents in the collection.</td><td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$min : "$likes"}}}])</td></tr>
+<tr><td>$max</td><td>Gets the maximum of the corresponding values from all documents in the collection.</td><td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$max : "$likes"}}}])</td></tr>
+<tr><td>$push</td><td>Inserts the value to an array in the resulting document.</td><td>db.mycol.aggregate([{$group : {_id : "$by_user", url : {$push: "$url"}}}])</td></tr>
+<tr><td>$addToSet</td><td>Inserts the value to an array in the resulting document but does not create duplicates.</td><td>db.mycol.aggregate([{$group : {_id : "$by_user", url : {$addToSet : "$url"}}}])</td></tr>
+<tr><td>$first</td><td>Gets the first document from the source documents according to the grouping. Typically this makes only sense together with some previously applied “$sort”-stage.</td><td>db.mycol.aggregate([{$group : {_id : "$by_user", first_url : {$first : "$url"}}}])</td></tr>
+<tr><td>$last</td><td>Gets the last document from the source documents according to the grouping. Typically this makes only sense together with some previously applied “$sort”-stage.</td><td>db.mycol.aggregate([{$group : {_id : "$by_user", last_url : {$last : "$url"}}}])</td></tr>
+</tbody></table>
+<h1>MongoDB Replication</h1>
+<p>Replication is the process of synchronizing data across multiple servers. Replication provides redundancy and increases data availability with multiple copies of data on different database servers, replication protects a database from the loss of a single server. Replication also allows you to recover from hardware failure and service interruptions. With additional copies of the data, you can dedicate one to disaster recovery, reporting, or backup.</p>
+<h2>Why Replication?</h2>
+<ul class="list">
+<li>To keep your data safe</li>
+<li>High (24*7) availability of data</li>
+<li>Disaster Recovery</li>
+<li>No downtime for maintenance (like backups, index rebuilds, compaction)</li>
+<li>Read scaling (extra copies to read from)</li>
+<li>Replica set is transparent to the application</li>
+</ul>
+<h2>How replication works in MongoDB</h2>
+<p>MongoDB achieves replication by the use of replica set. A replica set is a group of <b>mongod</b> instances that host the same data set. In a replica one node is primary node that receives all write operations. All other instances, secondaries, apply operations from the primary so that they have the same data set. Replica set can have only one primary node.</p>
+<ol class="list">
+<li>Replica set is a group of two or more nodes (generally minimum 3 nodes are required).</li>
+<li>In a replica set one node is primary node and remaining nodes are secondary.</li>
+<li>All data replicates from primary to secondary node.</li>
+<li>At the time of automatic failover or maintenance, election establishes for primary and a new primary node is elected.</li>
+<li>After the recovery of failed node, it again join the replica set and works as a secondary node.</li>
+</ol>
+<p>A typical diagram of mongodb replication is shown in which client application always interact with primary node and primary node then replicate the data to the secondary nodes.</p>
+<p><img src="./MongoDB - Quick Guide_files/replication.png" alt="MongoDB Replication"></p>
+<h2>Replica set features</h2>
+<ul class="list">
+<li>A cluster of N nodess</li>
+<li>Anyone node can be primary</li>
+<li>All write operations goes to primary</li>
+<li>Automatic failover</li>
+<li>Automatic Recovery</li>
+<li>Consensus election of primary</li>
+</ul>
+<h2>Set up a replica set</h2>
+<p>In this tutorial we will convert standalone mongod instance to a replica set. To convert to replica set follow the below given steps: </p>
+<ul class="list">
+<li>Shutdown already running mongodb server.</li>
+<li>
+<p>Now start the mongodb server by specifying <b>--replSet</b> option. Basic syntax of <b>--replSet</b> is given below: </p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">mongod </span><span class="pun">--</span><span class="pln">port </span><span class="str">"PORT"</span><span class="pln"> </span><span class="pun">--</span><span class="pln">dbpath </span><span class="str">"YOUR_DB_DATA_PATH"</span><span class="pln"> </span><span class="pun">--</span><span class="pln">replSet </span><span class="str">"REPLICA_SET_INSTANCE_NAME"</span></pre>
+<h2>Example</h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">mongod </span><span class="pun">--</span><span class="pln">port </span><span class="lit">27017</span><span class="pln"> </span><span class="pun">--</span><span class="pln">dbpath </span><span class="str">"D:\set up\mongodb\data"</span><span class="pln"> </span><span class="pun">--</span><span class="pln">replSet rs0</span></pre>
+<p>It will start a mongod instance with the name rs0, on port 27017</p>
+</li>
+<li>Now start the command prompt and connect to this mongod instance.</li>
+<li>In mongo client issue the command <b>rs.initiate()</b> to initiate a new replica set.</li>
+<li><p>To check the replica set configuration issue the command <b>rs.conf()</b>. </p></li>
+<li><p>To check the status of replica sete issue the command <b>rs.status()</b>. </p></li>
+</ul>
+<h1>MongoDB Create Backup</h1>
+<h2>Dump MongoDB Data</h2>
+<p>To create backup of database in mongodb you should use <b>mongodump</b> command. This command will dump all data of your server into dump directory. There are many options available by which you can limit the amount of data or create backup of your remote server.</p>
+<h2>Syntax:</h2>
+<p>Basic syntax of <b>mongodump</b> command is as follows</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">mongodump</span></pre>
+<h2>Example</h2>
+<p>Start your mongod server. Assuming that your mongod server is running on localhost and port 27017. Now open a command prompt and go to bin directory of your mongodb instance and type the command <b>mongodump</b></p>
+<p>Consider the mycol collectioin has following data.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">mongodump</span></pre>
+<p>The command will connect to the server running at <b>127.0.0.1</b> and port <b>27017</b> and back all data of the server to directory <b>/bin/dump/</b>. Output of the command is shown below: <img src="./MongoDB - Quick Guide_files/mongodump.png" alt="DB Stats" width="500px"></p>
+<p>There are a list of available options that can be used with the <b>mongodump</b> command.</p>
+This command will backup only specified database at specified path<table class="table table-bordered">
+<tbody><tr><th style="width:40%">Syntax</th><th style="width:30%">Description</th><th>Example</th></tr>
+<tr><td>mongodump --host HOST_NAME --port PORT_NUMBER</td><td>This commmand will backup all databases of specified mongod instance.</td><td>mongodump --host tutorialspoint.com --port 27017</td></tr>
+<tr><td>mongodump --dbpath DB_PATH --out BACKUP_DIRECTORY</td><td></td><td>mongodump --dbpath /data/db/ --out /data/backup/</td></tr>
+<tr><td>mongodump --collection COLLECTION --db DB_NAME</td><td>This command will backup only specified collection of specified database.</td><td>mongodump --collection mycol --db test</td></tr>
+</tbody></table>
+<h2>Restore data</h2>
+<p>To restore backup data mongodb's <b>mongorestore</b> command is used. This command restore all of the data from the back up directory.</p>
+<h2>Syntax</h2>
+<p>Basic syntax of &lt;<b>mongorestore</b> command is</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pun">&gt;</span><span class="pln">mongorestore</span></pre>
+<p>Output of the command is shown below: <img src="./MongoDB - Quick Guide_files/mongorestore.png" alt="DB Stats" width="500px"></p>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/mongodb/mongodb_autoincrement_sequence.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="http://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="pdf-btn">
+<a href="http://www.tutorialspoint.com/mongodb/pdf/mongodb_quick_guide.pdf" title="MongoDB - Quick Guide" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/mongodb/mongodb_useful_resources.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="./MongoDB - Quick Guide_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:400px;margin:0;padding:0;position:relative;visibility:visible;width:580px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:400px;margin:0;padding:0;position:relative;visibility:visible;width:580px;background-color:transparent"><iframe width="580" height="400" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.facebook.com/sharer.php?u=&#39; + &#39;http://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./MongoDB - Quick Guide_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://twitter.com/share?url=&#39; + &#39;http://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./MongoDB - Quick Guide_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.linkedin.com/cws/share?url=&#39; + &#39;http://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./MongoDB - Quick Guide_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://plus.google.com/share?url=http://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./MongoDB - Quick Guide_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./MongoDB - Quick Guide_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://reddit.com/submit?url=http://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=656,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./MongoDB - Quick Guide_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="./MongoDB - Quick Guide_files/show_ads.js">
+</script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="./MongoDB - Quick Guide_files/show_ads.js">
+</script><ins id="aswift_3_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_3_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="./MongoDB - Quick Guide_files/show_ads.js">
+</script><ins id="aswift_4_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_4_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="http://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="./MongoDB - Quick Guide_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="http://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2016. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == &#39;Enter email for newsletter...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Enter email for newsletter...&#39;;}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="./MongoDB - Quick Guide_files/custom-min.js"></script><a class="scroll-to-top visible" href="http://www.tutorialspoint.com/#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="./MongoDB - Quick Guide_files/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+
+
+
+<div class="autocomplete-suggestions "></div></body></html>
